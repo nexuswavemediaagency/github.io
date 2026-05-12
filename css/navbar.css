@@ -1,0 +1,165 @@
+/* =============================================
+   NEXUS WAVE — navbar.css
+   Fixed navigation bar
+   ============================================= */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 56px;
+  background: rgba(5, 5, 5, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.3s var(--ease);
+}
+
+#navbar.scrolled {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* ─── Logo ─── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo-mark {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.nav-logo-mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-wordmark {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  line-height: 1;
+}
+
+.nav-wordmark span {
+  display: block;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--g5);
+  font-style: normal;
+  margin-top: 2px;
+}
+
+/* ─── Nav links ─── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--g5);
+  padding: 6px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.2px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: rgba(255,255,255,0.06);
+}
+
+/* ─── CTA ─── */
+.nav-cta {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 9px 20px;
+}
+
+/* ─── Hamburger ─── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--g5);
+  transition: all 0.25s var(--ease);
+  transform-origin: left;
+}
+
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translateY(-1px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translateY(1px); }
+
+/* ─── Mobile Menu ─── */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 67px;
+  left: 0;
+  right: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 24px 28px 32px;
+  z-index: 99;
+  gap: 4px;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu a {
+  font-size: 15px;
+  color: var(--g5);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu a:hover {
+  color: var(--text);
+}
+
+.mobile-menu .mob-cta {
+  display: inline-flex;
+  margin-top: 16px;
+  width: fit-content;
+}

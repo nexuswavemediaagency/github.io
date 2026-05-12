@@ -1,0 +1,52 @@
+<!-- =============================================
+     NEXUS WAVE — components/navbar.html
+     Copy-paste into every page inside <body>
+     ============================================= -->
+
+<nav id="navbar">
+  <!-- Logo -->
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
+        <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
+        <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
+        <line x1="2" y1="20" x2="38" y2="20" stroke="#3D3D3D" stroke-width="0.5"/>
+        <line x1="20" y1="2" x2="20" y2="38" stroke="#3D3D3D" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <div class="nav-wordmark">
+      Nexus Wave
+      <span>Media Agency</span>
+    </div>
+  </a>
+
+  <!-- Desktop links -->
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <!-- CTA -->
+  <a class="btn-primary nav-cta" href="contact.html">Start a Project →</a>
+
+  <!-- Hamburger -->
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html"     onclick="closeMenu()">Home</a>
+  <a href="about.html"     onclick="closeMenu()">About</a>
+  <a href="portfolio.html" onclick="closeMenu()">Portfolio</a>
+  <a href="pricing.html"   onclick="closeMenu()">Pricing</a>
+  <a href="contact.html"   onclick="closeMenu()">Contact</a>
+  <a href="contact.html" class="btn-primary mob-cta" onclick="closeMenu()">Start a Project →</a>
+</div>

@@ -1,0 +1,300 @@
+/* =============================================
+   NEXUS WAVE — css/pages/portfolio.css
+   Page-specific styles
+   ============================================= */
+
+    /* ── Portfolio-specific ── */
+
+    .port-hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 160px 56px 72px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .port-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 60% 70% at 15% 70%, black 5%, transparent 80%);
+    }
+
+    .port-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(44px, 8vw, 96px);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -4px;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .port-hero p {
+      font-size: 15px;
+      color: var(--g5);
+      max-width: 480px;
+      line-height: 1.75;
+      font-weight: 300;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Filter bar */
+    .filter-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 56px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--g4);
+      font-weight: 500;
+      margin-right: 8px;
+    }
+
+    .filter-btn {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--g5);
+      padding: 7px 16px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      background: transparent;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: color 0.2s, background 0.2s, border-color 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    /* Portfolio grid */
+    .portfolio-section {
+      background: var(--bg);
+      padding: 56px 56px 80px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+    }
+
+    /* Each card */
+    .pcard {
+      background: var(--surface);
+      display: block;
+      text-decoration: none;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 4 / 5;
+      transition: background 0.3s var(--ease);
+    }
+
+    .pcard:hover {
+      background: var(--surface2);
+    }
+
+    .pcard.hidden {
+      display: none;
+    }
+
+    .pcard-inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
+      position: relative;
+    }
+
+    /* ghost number */
+    .pcard-ghost {
+      position: absolute;
+      bottom: -16px;
+      right: -8px;
+      font-family: var(--display);
+      font-size: 120px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.035);
+      line-height: 1;
+      letter-spacing: -6px;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .pcard-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--g5);
+      font-weight: 500;
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      width: fit-content;
+      border-radius: 2px;
+    }
+
+    .pcard-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pcard-service {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--g5);
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .pcard-title {
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .pcard-desc {
+      font-size: 12px;
+      color: var(--g5);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .pcard-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .pbadge {
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--g4);
+      padding: 3px 8px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
+
+    /* Stats bar */
+    .stats-strip {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat-cell {
+      padding: 36px 32px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat-cell:last-child {
+      border-right: none;
+    }
+
+    .stat-num {
+      font-family: var(--display);
+      font-size: 52px;
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .stat-num span {
+      font-size: 32px;
+      color: var(--g5);
+    }
+
+    .stat-lbl {
+      font-size: 12px;
+      color: var(--g5);
+      margin-top: 8px;
+      font-weight: 300;
+    }
+
+    /* CTA */
+    .port-cta {
+      background: var(--bg);
+      padding: 100px 56px;
+      text-align: center;
+    }
+
+    .port-cta h2 {
+      font-family: var(--display);
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .port-cta p {
+      font-size: 15px;
+      color: var(--g5);
+      max-width: 440px;
+      margin: 0 auto 44px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .port-cta-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .port-hero { padding: 130px 28px 60px; }
+      .filter-bar { padding: 16px 28px; }
+      .portfolio-section { padding: 40px 28px 60px; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .port-cta { padding: 72px 28px; }
+    }
+
+    @media (max-width: 640px) {
+      .port-hero { padding: 110px 20px 48px; }
+      .filter-bar { padding: 14px 20px; }
+      .portfolio-section { padding: 28px 20px 48px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .port-cta { padding: 56px 20px; }
+    }

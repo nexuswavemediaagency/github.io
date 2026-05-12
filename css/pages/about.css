@@ -1,0 +1,432 @@
+/* =============================================
+   NEXUS WAVE — css/pages/about.css
+   Page-specific styles
+   ============================================= */
+
+    /* ── About-specific styles ── */
+
+    .about-hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 160px 56px 80px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 70% 80% at 20% 60%, black 10%, transparent 80%);
+    }
+
+    .about-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(44px, 8vw, 100px);
+      font-weight: 900;
+      line-height: 0.92;
+      letter-spacing: -4px;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-hero .sub {
+      font-size: 16px;
+      color: var(--g5);
+      max-width: 540px;
+      line-height: 1.75;
+      font-weight: 300;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Origin stats */
+    .origin-bar {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .oc-item {
+      padding: 36px 40px;
+      border-right: 1px solid var(--border);
+    }
+
+    .oc-item:last-child {
+      border-right: none;
+    }
+
+    .oc-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--g5);
+      margin-bottom: 10px;
+    }
+
+    .oc-big {
+      font-family: var(--display);
+      font-size: 36px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: var(--text);
+    }
+
+    .oc-desc {
+      font-size: 12px;
+      color: var(--g5);
+      margin-top: 6px;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* Story */
+    .story-section {
+      background: var(--bg);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .story-text p {
+      font-size: 15px;
+      color: var(--g5);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .story-text p strong {
+      color: var(--g7);
+      font-weight: 500;
+    }
+
+    /* Mission + Values */
+    .mission-section {
+      background: var(--surface);
+    }
+
+    .mission-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 48px;
+      margin-bottom: 2px;
+    }
+
+    .mission-box blockquote {
+      font-family: var(--display);
+      font-size: clamp(18px, 2.5vw, 26px);
+      font-style: italic;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.35;
+      color: var(--text);
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .val-item {
+      background: var(--surface2);
+      padding: 36px;
+      transition: background 0.22s;
+    }
+
+    .val-item:hover {
+      background: var(--surface3);
+    }
+
+    .val-num {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--g4);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .val-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .val-desc {
+      font-size: 13px;
+      color: var(--g5);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Hyderabad */
+    .hyd-section {
+      background: var(--bg);
+    }
+
+    .hyd-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .hyd-text p {
+      font-size: 15px;
+      color: var(--g5);
+      line-height: 1.85;
+      font-weight: 300;
+      margin-bottom: 20px;
+    }
+
+    .hyd-text p strong {
+      color: var(--g7);
+      font-weight: 500;
+    }
+
+    .hyd-coords {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--g4);
+      font-weight: 400;
+      margin-bottom: 28px;
+    }
+
+    .hyd-facts {
+      border-top: 1px solid var(--border);
+    }
+
+    .hyd-fact {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .hyd-fact-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--g4);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .hyd-fact-text {
+      font-size: 13px;
+      color: var(--g5);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+
+    /* Timeline */
+    .timeline-section {
+      background: var(--surface);
+    }
+
+    .timeline {
+      position: relative;
+      border-left: 1px solid var(--border);
+      padding-left: 40px;
+      margin-left: 20px;
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 56px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -44px;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--g4);
+      border: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    .tl-item:hover::before {
+      background: var(--text);
+    }
+
+    .tl-year {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--g4);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .tl-title {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .tl-desc {
+      font-size: 14px;
+      color: var(--g5);
+      line-height: 1.75;
+      font-weight: 300;
+      max-width: 560px;
+    }
+
+    /* Approach */
+    .approach-section {
+      background: var(--bg);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .ap-card {
+      background: var(--surface);
+      padding: 48px 36px;
+      transition: background 0.25s;
+    }
+
+    .ap-card:hover {
+      background: var(--surface2);
+    }
+
+    .ap-num {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--g4);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .ap-title {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 14px;
+    }
+
+    .ap-desc {
+      font-size: 13px;
+      color: var(--g5);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* Tools */
+    .tools-section {
+      background: var(--surface);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 2px;
+      background: var(--border);
+    }
+
+    .tool-chip {
+      background: var(--surface2);
+      padding: 20px 20px;
+      transition: background 0.2s;
+    }
+
+    .tool-chip:hover {
+      background: var(--surface3);
+    }
+
+    .tool-chip-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .tool-chip-cat {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--g5);
+      font-weight: 400;
+    }
+
+    /* About CTA */
+    .about-cta {
+      background: var(--bg);
+      padding: 120px 56px;
+      text-align: center;
+    }
+
+    .about-cta h2 {
+      font-family: var(--display);
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      letter-spacing: -3px;
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .about-cta p {
+      font-size: 16px;
+      color: var(--g5);
+      max-width: 440px;
+      margin: 0 auto 44px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .about-cta-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-hero { padding: 140px 28px 72px; }
+      .about-cta  { padding: 80px 28px; }
+      .story-grid,
+      .hyd-grid   { grid-template-columns: 1fr; gap: 40px; }
+      .origin-bar { grid-template-columns: 1fr; }
+      .oc-item    { border-right: none; border-bottom: 1px solid var(--border); }
+      .values-grid,
+      .approach-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .about-hero { padding: 110px 20px 56px; }
+      .about-cta  { padding: 64px 20px; }
+      .timeline   { padding-left: 24px; margin-left: 8px; }
+      .timeline .tl-item::before { left: -28px; }
+    }

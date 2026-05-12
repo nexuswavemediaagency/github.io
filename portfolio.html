@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- SEO -->
+  <title>Portfolio — Nexus Wave Media Agency | Real Client Work</title>
+  <meta name="description" content="Real client work from Nexus Wave Media Agency — social media, Meta Ads, web design, and automation projects for businesses across Hyderabad and Pakistan."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://nexuswavemediaagency.com/portfolio"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://nexuswavemediaagency.com/portfolio"/>
+  <meta property="og:title" content="Portfolio — Nexus Wave Media Agency"/>
+  <meta property="og:description" content="Real work. Real clients. Delivered across Hyderabad, Pakistan, and internationally."/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/pages/portfolio.css"/>
+
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav id="navbar">
+    <a class="nav-logo" href="index.html">
+      <div class="nav-logo-mark">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
+          <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
+          <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
+          <line x1="2" y1="20" x2="38" y2="20" stroke="#3D3D3D" stroke-width="0.5"/>
+          <line x1="20" y1="2" x2="20" y2="38" stroke="#3D3D3D" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <div class="nav-wordmark">Nexus Wave<span>Media Agency</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="btn-primary nav-cta" href="contact.html">Start a Project →</a>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"     onclick="closeMenu()">Home</a>
+    <a href="about.html"     onclick="closeMenu()">About</a>
+    <a href="portfolio.html" onclick="closeMenu()">Portfolio</a>
+    <a href="pricing.html"   onclick="closeMenu()">Pricing</a>
+    <a href="contact.html"   onclick="closeMenu()">Contact</a>
+    <a href="contact.html" class="btn-primary mob-cta" onclick="closeMenu()">Start a Project →</a>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section class="port-hero">
+    <div class="label reveal" style="margin-bottom:24px;">Our Work</div>
+    <h1 class="reveal">Real clients.<br/>Real results.<br/><span class="display-italic">Real work.</span></h1>
+    <p class="reveal">Every project below was delivered for an actual business — no mockups, no fake case studies. This is what we actually do, from Hyderabad to the world.</p>
+  </section>
+
+  <!-- ─── FILTER ─── -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter</span>
+    <button class="filter-btn active" data-filter="all"   onclick="filterCards(this)">All Work</button>
+    <button class="filter-btn"        data-filter="social" onclick="filterCards(this)">Social Media</button>
+    <button class="filter-btn"        data-filter="ads"    onclick="filterCards(this)">Paid Ads</button>
+    <button class="filter-btn"        data-filter="design" onclick="filterCards(this)">Design</button>
+    <button class="filter-btn"        data-filter="web"    onclick="filterCards(this)">Web</button>
+    <button class="filter-btn"        data-filter="auto"   onclick="filterCards(this)">Automation</button>
+  </div>
+
+  <!-- ─── PORTFOLIO GRID ─── -->
+  <section class="portfolio-section">
+    <div class="portfolio-grid" id="portfolioGrid">
+
+      <!-- 01 Mariam Montessori -->
+      <a class="pcard reveal" href="contact.html" data-cats="social ads design">
+        <div class="pcard-inner">
+          <span class="pcard-tag">Education · Hyderabad</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Social Media + Meta Ads</div>
+            <div class="pcard-title">Mariam Montessori School</div>
+            <p class="pcard-desc">Full social media management and Meta Ads campaign for a Hyderabad-based school. Grew organic reach and ran targeted parent acquisition ads.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Real Client</span>
+              <span class="pbadge">Meta Ads</span>
+              <span class="pbadge">Social</span>
+              <span class="pbadge">Design</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">01</div>
+        </div>
+      </a>
+
+      <!-- 02 PPP -->
+      <a class="pcard reveal" href="contact.html" data-cats="social design">
+        <div class="pcard-inner">
+          <span class="pcard-tag">Political · Pakistan</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Campaign Design + Content</div>
+            <div class="pcard-title">PPP Pakistan</div>
+            <p class="pcard-desc">Political campaign content creation including graphics, reels, and social media posts. Consistent brand messaging across platforms.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Real Client</span>
+              <span class="pbadge">Campaign</span>
+              <span class="pbadge">Content</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">02</div>
+        </div>
+      </a>
+
+      <!-- 03 Funny Plates -->
+      <a class="pcard reveal" href="contact.html" data-cats="social design">
+        <div class="pcard-inner">
+          <span class="pcard-tag">F&amp;B · Hyderabad</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Social Media + Design</div>
+            <div class="pcard-title">Funny Plates</div>
+            <p class="pcard-desc">Creative content and design for a food brand. Menu graphics, reels, and engagement posts that built a loyal local following.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Real Client</span>
+              <span class="pbadge">Social</span>
+              <span class="pbadge">Design</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">03</div>
+        </div>
+      </a>
+
+      <!-- 04 Green Generation -->
+      <a class="pcard reveal" href="contact.html" data-cats="social">
+        <div class="pcard-inner">
+          <span class="pcard-tag">Lifestyle · Pakistan</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Social Media Management</div>
+            <div class="pcard-title">Green Generation</div>
+            <p class="pcard-desc">Ongoing social media content and strategy for an eco-conscious lifestyle brand. Consistent posting and community engagement.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Real Client</span>
+              <span class="pbadge">Social</span>
+              <span class="pbadge">Content</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">04</div>
+        </div>
+      </a>
+
+      <!-- 05 Bikanery -->
+      <a class="pcard reveal" href="contact.html" data-cats="social design">
+        <div class="pcard-inner">
+          <span class="pcard-tag">F&amp;B · Hyderabad</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Social Media + Design</div>
+            <div class="pcard-title">Bikanery Restaurant</div>
+            <p class="pcard-desc">Food photography direction, menu design, and social media content for a traditional restaurant. Grew Instagram following organically.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Real Client</span>
+              <span class="pbadge">Design</span>
+              <span class="pbadge">Social</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">05</div>
+        </div>
+      </a>
+
+      <!-- 06 Khaiyam Ali -->
+      <a class="pcard reveal" href="contact.html" data-cats="social design">
+        <div class="pcard-inner">
+          <span class="pcard-tag">Personal Brand · Pakistan</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Personal Brand + Social</div>
+            <div class="pcard-title">Khaiyam Ali</div>
+            <p class="pcard-desc">Personal brand strategy, content creation, and social media management for a public figure. Built consistent online presence across platforms.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Real Client</span>
+              <span class="pbadge">Brand</span>
+              <span class="pbadge">Content</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">06</div>
+        </div>
+      </a>
+
+      <!-- 07 Agency Site -->
+      <a class="pcard reveal" href="contact.html" data-cats="web design">
+        <div class="pcard-inner">
+          <span class="pcard-tag">Web Design · Live</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Website Design + SEO</div>
+            <div class="pcard-title">Nexus Wave Agency Site</div>
+            <p class="pcard-desc">Built with jitter animations, full SEO schema markup, and optimised for conversions. Hosted on Vercel, domain on Hostinger.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Live</span>
+              <span class="pbadge">Web Design</span>
+              <span class="pbadge">SEO</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">07</div>
+        </div>
+      </a>
+
+      <!-- 08 Automation -->
+      <a class="pcard reveal" href="contact.html" data-cats="auto">
+        <div class="pcard-inner">
+          <span class="pcard-tag">Automation · Pakistan</span>
+          <div class="pcard-body">
+            <div class="pcard-service">WhatsApp Bot + CRM</div>
+            <div class="pcard-title">Lead Automation System</div>
+            <p class="pcard-desc">WhatsApp automation bot that captures leads, answers FAQs, and sends follow-up messages automatically. Zero missed leads.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Client Project</span>
+              <span class="pbadge">Automation</span>
+              <span class="pbadge">AI</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">08</div>
+        </div>
+      </a>
+
+      <!-- 09 Lead Gen -->
+      <a class="pcard reveal" href="contact.html" data-cats="ads">
+        <div class="pcard-inner">
+          <span class="pcard-tag">Paid Ads · Hyderabad</span>
+          <div class="pcard-body">
+            <div class="pcard-service">Meta Ads Campaign</div>
+            <div class="pcard-title">Education Lead Gen Campaign</div>
+            <p class="pcard-desc">Meta Ads lead generation for an educational institution. Targeted parents in Hyderabad. Delivered qualified inquiries within 2 weeks of launch.</p>
+            <div class="pcard-badges">
+              <span class="pbadge">Real Campaign</span>
+              <span class="pbadge">Meta Ads</span>
+              <span class="pbadge">Lead Gen</span>
+            </div>
+          </div>
+          <div class="pcard-ghost">09</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ─── STATS ─── -->
+  <div class="stats-strip">
+    <div class="stat-cell reveal">
+      <div class="stat-num">50<span>+</span></div>
+      <div class="stat-lbl">Projects delivered</div>
+    </div>
+    <div class="stat-cell reveal">
+      <div class="stat-num">20<span>+</span></div>
+      <div class="stat-lbl">Clients served</div>
+    </div>
+    <div class="stat-cell reveal">
+      <div class="stat-num">6<span>+</span></div>
+      <div class="stat-lbl">Industries covered</div>
+    </div>
+    <div class="stat-cell reveal">
+      <div class="stat-num">5<span>★</span></div>
+      <div class="stat-lbl">Average client rating</div>
+    </div>
+  </div>
+
+  <!-- ─── CTA ─── -->
+  <div class="port-cta">
+    <h2 class="reveal">Want results<br/>like these?</h2>
+    <p class="reveal">Tell us about your business. We'll be straight with you about what will actually move the needle.</p>
+    <div class="port-cta-btns reveal">
+      <a class="btn-primary" href="contact.html">Start a Project →</a>
+      <a class="btn-outline" href="pricing.html">View Pricing</a>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <a class="wa-float" href="https://wa.me/923047355553" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-mark">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
+            <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
+            <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="footer-wordmark">Nexus Wave</div>
+        <p class="footer-desc">A focused digital marketing agency operating from Hyderabad, Pakistan. No bloated teams. No vague strategies. Just precise, measurable marketing that compounds over time.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="pricing.html">Social Media</a>
+          <a href="pricing.html">Paid Ads</a>
+          <a href="pricing.html">Branding</a>
+          <a href="pricing.html">Web Design</a>
+          <a href="pricing.html">AI Marketing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="https://wa.me/923047355553" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:info@nexuswavemediaagency.com">Email</a>
+          <a href="https://instagram.com/nexuswavemedia" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2026 Nexus Wave Media Agency · Hyderabad, Sindh, Pakistan</div>
+      <div class="footer-bottom-right">Month-to-month · No contracts · USD pricing worldwide</div>
+    </div>
+    <div class="footer-bigword" aria-hidden="true">NEXUS WAVE</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/navbar.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

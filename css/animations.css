@@ -1,0 +1,232 @@
+/* =============================================
+   NEXUS WAVE — animations.css
+   All keyframes, transitions, and motion rules
+   ============================================= */
+
+/* ─── Scroll Reveal ──────────────────────────────
+   Applied via JS: adds .visible class when
+   element enters viewport.
+   ─────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity  0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger siblings automatically */
+.reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal:nth-child(4) { transition-delay: 240ms; }
+
+/* ─── Page Load Sequence ─────────────────────────
+   Hero elements fade in on first paint.
+   Delays applied in JS via initPageLoad().
+   ─────────────────────────────────────────────── */
+.hero-eyebrow,
+.hero-headline,
+.hero-sub,
+.hero-btns {
+  will-change: opacity, transform;
+}
+
+/* ─── Marquee ────────────────────────────────────
+   Infinite horizontal scroll. Two rows use
+   opposite directions (set per-row in HTML).
+   ─────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Second row moves in reverse */
+.marquee-row:nth-child(2) .marquee-track {
+  animation-duration: 36s;
+  animation-direction: reverse;
+}
+
+/* ─── Service Row Fill ───────────────────────────
+   Background fills from left on hover.
+   220ms as specified in brand motion rules.
+   ─────────────────────────────────────────────── */
+.svc-row {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.svc-row::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 0;
+  background: var(--surface2);
+  transition: width 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.svc-row:hover::before {
+  width: 100%;
+}
+
+/* ─── FAQ Accordion ──────────────────────────────
+   Height transition from 0 to max-height.
+   ─────────────────────────────────────────────── */
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.faq-item.open .faq-a {
+  max-height: 400px;
+}
+
+.faq-icon {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.3s,
+              color 0.3s,
+              border-color 0.3s;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+/* ─── Jitter / Scramble Text ─────────────────────
+   The .jitter-word element text is swapped by
+   animations.js scrambleTo(). No CSS animation
+   needed — just ensure inline-block and width.
+   ─────────────────────────────────────────────── */
+.jitter-word {
+  display: inline-block;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--g5);
+  min-width: 3ch;
+  font-family: var(--display);
+}
+
+/* ─── Button Hover States ────────────────────────
+   Unified across all pages.
+   ─────────────────────────────────────────────── */
+.btn-primary {
+  transition:
+    opacity  0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.2);
+  color: var(--text);
+}
+
+/* ─── Card Hover States ──────────────────────────
+   Portfolio and testimonial cards.
+   ─────────────────────────────────────────────── */
+.pcard {
+  transition: background 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tcard {
+  transition: background 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ─── Why / Feature List Hover ───────────────────
+   Slide right on hover.
+   ─────────────────────────────────────────────── */
+.why-item {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.why-item:hover {
+  transform: translateX(8px);
+}
+
+/* ─── Contact Method Hover ───────────────────────
+   Slide right on hover.
+   ─────────────────────────────────────────────── */
+.cmethod {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cmethod:hover {
+  transform: translateX(6px);
+}
+
+/* ─── WhatsApp Float ─────────────────────────────
+   Subtle lift on hover.
+   ─────────────────────────────────────────────── */
+.wa-float {
+  transition:
+    background 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform  0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.wa-float:hover {
+  background: var(--surface2);
+  transform: translateY(-2px);
+}
+
+/* ─── Footer Nav Link Hover ──────────────────────
+   ─────────────────────────────────────────────── */
+.footer-col a {
+  transition: color 0.2s;
+}
+
+/* ─── Timeline dot hover ─────────────────────────
+   ─────────────────────────────────────────────── */
+.tl-item::before {
+  transition: background 0.2s;
+}
+
+/* ─── Reduced Motion Override ────────────────────
+   Respects OS-level "reduce motion" setting.
+   ─────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}

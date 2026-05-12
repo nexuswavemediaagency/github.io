@@ -1,0 +1,221 @@
+/* =============================================
+   NEXUS WAVE — style.css
+   Global variables, reset, typography, shared
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Instrument+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── CSS Variables ─── */
+:root {
+  --bg:      #050505;
+  --surface: #111111;
+  --surface2: #1C1C1C;
+  --surface3: #2A2A2A;
+  --g4:      #3D3D3D;
+  --g5:      #6B6B6B;
+  --g6:      #9A9A9A;
+  --g7:      #C8C8C8;
+  --g8:      #E8E8E6;
+  --text:    #FAFAF8;
+  --border:  rgba(255,255,255,0.08);
+  --display: 'Playfair Display', Georgia, serif;
+  --sans:    'Instrument Sans', system-ui, sans-serif;
+  --ease:    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ─── Typography ─── */
+.display {
+  font-family: var(--display);
+  font-weight: 900;
+  letter-spacing: -3px;
+  line-height: 0.92;
+}
+
+.display-italic {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--g5);
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--g5);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--g5);
+  flex-shrink: 0;
+}
+
+/* ─── Sections ─── */
+section {
+  padding: 120px 56px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text);
+  color: var(--bg);
+  padding: 14px 28px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--sans);
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--g5);
+  padding: 14px 28px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-family: var(--sans);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.2);
+  color: var(--text);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--g5);
+  font-size: 13px;
+  font-family: var(--sans);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+}
+
+/* ─── Dividers ─── */
+.rule {
+  height: 1px;
+  background: var(--border);
+  margin: 40px 0;
+}
+
+/* ─── Scroll Reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── WhatsApp Button ─── */
+.wa-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.wa-float:hover {
+  background: var(--surface2);
+  transform: translateY(-2px);
+}
+
+.wa-float svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--g6);
+  transition: fill 0.2s;
+}
+
+.wa-float:hover svg {
+  fill: var(--text);
+}
