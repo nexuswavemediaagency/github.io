@@ -34,7 +34,7 @@
         throw new Error('Failed');
       }
     } catch {
-      msg.textContent  = 'Something went wrong. WhatsApp us at +92 304 7355553';
+      msg.textContent  = 'Something went wrong. WhatsApp us at +92 327 8263522';
       msg.className    = 'cmsg err';
       btn.disabled     = false;
       btn.textContent  = 'Send Message →';
