@@ -1,4 +1,4 @@
-/* Premium homepage interactions: navigation, reveal motion, and subtle card light. */
+/* Premium homepage interactions: loader, navigation, reveal motion, and soft pointer effects. */
 (function () {
   'use strict';
 
@@ -6,9 +6,48 @@
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   const year = document.getElementById('currentYear');
+  const loader = document.getElementById('introLoader');
+  const loaderCount = document.getElementById('loaderCount');
+  const loaderBar = document.getElementById('loaderBar');
+  const cursorGlow = document.getElementById('cursorGlow');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
 
   if (year) year.textContent = String(new Date().getFullYear());
+
+  function completeLoader() {
+    if (!loader) return;
+    if (loaderCount) loaderCount.textContent = '100';
+    if (loaderBar) loaderBar.style.width = '100%';
+    loader.classList.add('is-complete');
+    window.setTimeout(function () { loader.remove(); }, 520);
+  }
+
+  if (loader) {
+    if (reducedMotion) {
+      window.setTimeout(completeLoader, 60);
+    } else {
+      const startedAt = performance.now();
+      const duration = 1300;
+
+      function updateLoader(now) {
+        const progress = Math.min((now - startedAt) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.min(100, Math.floor(eased * 100));
+
+        if (loaderCount) loaderCount.textContent = String(value);
+        if (loaderBar) loaderBar.style.width = value + '%';
+
+        if (progress < 1) {
+          window.requestAnimationFrame(updateLoader);
+        } else {
+          completeLoader();
+        }
+      }
+
+      window.requestAnimationFrame(updateLoader);
+    }
+  }
 
   function updateHeader() {
     if (header) header.classList.toggle('scrolled', window.scrollY > 24);
@@ -64,8 +103,39 @@
     });
   }
 
+  if (cursorGlow && finePointer && !reducedMotion) {
+    document.addEventListener('pointermove', function (event) {
+      cursorGlow.style.left = event.clientX + 'px';
+      cursorGlow.style.top = event.clientY + 'px';
+      cursorGlow.classList.add('is-visible');
+    }, { passive: true });
+
+    document.documentElement.addEventListener('mouseleave', function () {
+      cursorGlow.classList.remove('is-visible');
+    });
+
+    window.addEventListener('blur', function () {
+      cursorGlow.classList.remove('is-visible');
+    });
+  }
+
+  if (finePointer && !reducedMotion) {
+    document.querySelectorAll('.button, .nav-cta').forEach(function (button) {
+      button.addEventListener('pointermove', function (event) {
+        const bounds = button.getBoundingClientRect();
+        const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 7;
+        const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 7;
+        button.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
+      });
+
+      button.addEventListener('pointerleave', function () {
+        button.style.removeProperty('transform');
+      });
+    });
+  }
+
   const panel = document.querySelector('.system-panel');
-  if (panel && !reducedMotion && window.matchMedia('(pointer: fine)').matches) {
+  if (panel && finePointer && !reducedMotion) {
     panel.addEventListener('pointermove', function (event) {
       const bounds = panel.getBoundingClientRect();
       const x = ((event.clientX - bounds.left) / bounds.width) * 100;

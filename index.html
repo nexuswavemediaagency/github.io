@@ -29,6 +29,19 @@
   <link rel="stylesheet" href="css/pages/index.css"/>
 </head>
 <body class="premium-homepage">
+  <div class="intro-loader" id="introLoader" aria-hidden="true">
+    <div class="loader-noise"></div>
+    <div class="loader-brand">
+      <div class="loader-mark" aria-hidden="true"><span></span><span></span><strong>NW</strong></div>
+      <p>Nexus Wave</p>
+      <small>Digital Growth Studio</small>
+    </div>
+    <div class="loader-meter">
+      <div><span id="loaderCount">0</span><small>%</small></div>
+      <i><b id="loaderBar"></b></i>
+    </div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="page-noise" aria-hidden="true"></div>
   <div class="ambient ambient-one" aria-hidden="true"></div>
@@ -41,13 +54,13 @@
         <span class="brand-copy"><strong>Nexus Wave</strong><small>Digital Growth Studio</small></span>
       </a>
       <ul class="desktop-nav">
-        <li><a href="#services">Services</a></li><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="about.html">About</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li><li><a href="#services">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
       </ul>
       <a class="nav-cta" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
     </nav>
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a>
+      <a href="index.html" aria-current="page">Home</a><a href="#services">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a>
       <a class="mobile-menu-cta" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -60,7 +73,7 @@
         <p class="hero-lede reveal">A good business should not feel unclear online. We help shape the words, visuals, pages, and moments that make people understand you faster, trust you sooner, and choose you with more confidence.</p>
         <div class="hero-actions reveal">
           <a class="button button-primary" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="#work">See the Work <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="portfolio.html">See the Work <span aria-hidden="true">↗</span></a>
         </div>
         <div class="hero-note reveal"><span class="status-dot" aria-hidden="true"></span> Built with schools, local businesses, ecommerce brands, NGOs, and service-led teams.</div>
       </div>
@@ -188,7 +201,7 @@
       <div class="footer-brand"><a class="brand" href="index.html" aria-label="Nexus Wave home"><span class="brand-mark" aria-hidden="true">NW</span><span class="brand-copy"><strong>Nexus Wave</strong><small>Digital Growth Studio</small></span></a><p>Nexus Wave is a digital growth studio from Hyderabad, Sindh, shaping how businesses are seen, understood, and chosen.</p></div>
       <div class="footer-column"><h3>Explore</h3><a href="#services">Services</a><a href="#work">Selected work</a><a href="#process">Process</a><a href="about.html">About</a></div>
       <div class="footer-column"><h3>Pages</h3><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>
-      <div class="footer-column footer-contact"><h3>Start a conversation</h3><a href="mailto:letschat@nexuswavemediaagency.com">letschat@nexuswavemediaagency.com</a><a href="https://wa.me/923278263522" target="_blank" rel="noopener">+92 327 8263522</a><span>Hyderabad, Sindh, Pakistan</span></div>
+      <div class="footer-column footer-contact"><h3>Start a conversation</h3><a href="mailto:letschat@nexuswavemediaagency.com">letschat@nexuswavemediaagency.com</a><a href="mailto:nexuswavemediaagency@gmail.com">nexuswavemediaagency@gmail.com</a><a href="https://wa.me/923278263522" target="_blank" rel="noopener">+92 327 8263522</a><span>Hyderabad, Sindh, Pakistan</span></div>
     </div>
     <div class="footer-bottom"><span>© <span id="currentYear">2026</span> Nexus Wave Media Agency</span><span>Seen clearly · Felt properly · Chosen sooner</span></div>
   </footer>
