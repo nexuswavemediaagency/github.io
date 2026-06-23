@@ -95,6 +95,7 @@
   .result-card { right: 3%; left: auto; }
 }
 @media (max-width: 580px) {
+  .brand-logo-image { width: 132px; }
   .result-card { width: min(210px, calc(100% - 32px)); right: 16px; left: auto; bottom: 1%; padding: 14px; }
   .result-card > strong { font-size: 24px; }
 }
@@ -106,3 +107,17 @@
   .loader-globe-equator,
   .loader-globe-cross { animation: none !important; }
 }
+
+.brand-logo-link {
+  gap: 0;
+  min-width: 0;
+}
+.brand-logo-image {
+  width: clamp(142px, 13vw, 176px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(255,255,255,.08));
+}
+.footer-brand .brand-logo-image { width: 178px; }
+
