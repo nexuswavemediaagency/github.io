@@ -2,6 +2,11 @@
 (function () {
   'use strict';
 
+  var responsivePolish = document.createElement('link');
+  responsivePolish.rel = 'stylesheet';
+  responsivePolish.href = 'css/pages/index-responsive-fixes.css';
+  document.head.appendChild(responsivePolish);
+
   function onReady(callback) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', callback, { once: true });
