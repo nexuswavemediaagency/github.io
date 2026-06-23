@@ -21,6 +21,7 @@
     const cursorGlow = document.getElementById('cursorGlow');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const finePointer = window.matchMedia('(pointer: fine)').matches;
+    const desktopPointer = finePointer && window.matchMedia('(min-width: 1025px)').matches;
     const loaderDuration = reducedMotion ? 420 : 2100;
     const loaderFade = reducedMotion ? 220 : 560;
 
@@ -128,7 +129,7 @@
     });
   }
 
-  if (cursorGlow && finePointer && !reducedMotion) {
+  if (cursorGlow && desktopPointer && !reducedMotion) {
     document.addEventListener('pointermove', function (event) {
       cursorGlow.style.left = event.clientX + 'px';
       cursorGlow.style.top = event.clientY + 'px';
