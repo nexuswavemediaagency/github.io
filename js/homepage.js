@@ -32,6 +32,12 @@
 
     if (year) year.textContent = String(new Date().getFullYear());
 
+    const deliveryLabel = document.querySelector('.stats-glass .stat:last-child span');
+    if (deliveryLabel) {
+      deliveryLabel.textContent = 'Delivery';
+      deliveryLabel.style.textTransform = 'none';
+    }
+
     function restoreHashPosition() {
       if (!window.location.hash) return;
       const target = document.getElementById(window.location.hash.slice(1));
