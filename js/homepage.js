@@ -7,6 +7,11 @@
   responsivePolish.href = 'css/pages/index-responsive-fixes.css';
   document.head.appendChild(responsivePolish);
 
+  var headerStatsPolish = document.createElement('link');
+  headerStatsPolish.rel = 'stylesheet';
+  headerStatsPolish.href = 'css/pages/index-header-stats-fix.css';
+  document.head.appendChild(headerStatsPolish);
+
   function onReady(callback) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', callback, { once: true });
