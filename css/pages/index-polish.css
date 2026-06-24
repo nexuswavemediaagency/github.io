@@ -473,3 +473,40 @@
   .logo-row span { font-size: 20px !important; min-height: 88px !important; }
   .logo-row b { font-size: 8.5px !important; }
 }
+
+/* Desktop hero proof-card clearance: keep the bottom caption fully visible. */
+@media (min-width: 821px) {
+  .globe-stage.system-panel {
+    min-height: 540px;
+  }
+
+  .hero-system .result-card {
+    width: 208px !important;
+    padding: 14px !important;
+    top: 104px !important;
+    right: 22px !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
+
+  .hero-system .result-card > strong {
+    font-size: 24px !important;
+  }
+
+  .hero-system .result-card > p {
+    font-size: 9.5px !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero-system .result-bar {
+    margin-top: 11px !important;
+  }
+}
+
+@media (min-width: 821px) and (max-width: 1080px) {
+  .hero-system .result-card {
+    width: 198px !important;
+    top: 96px !important;
+    right: 18px !important;
+  }
+}
