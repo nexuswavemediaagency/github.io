@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nexus Wave icon">
+  <rect width="64" height="64" rx="18" fill="#050505"/>
+  <circle cx="32" cy="32" r="21" fill="none" stroke="#f4f5f0" stroke-opacity=".88" stroke-width="2"/>
+  <ellipse cx="32" cy="32" rx="8" ry="21" fill="none" stroke="#f4f5f0" stroke-opacity=".48" stroke-width="1.4"/>
+  <ellipse cx="32" cy="32" rx="21" ry="8" fill="none" stroke="#f4f5f0" stroke-opacity=".3" stroke-width="1.4"/>
+  <text x="32" y="39" text-anchor="middle" fill="#f4f5f0" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="600" letter-spacing="-2">NW</text>
+</svg>

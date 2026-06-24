@@ -3,574 +3,222 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="./images/logo.png">
-  <!-- SEO -->
-  <title>Nexus Wave Media Agency — Digital Marketing, Hyderabad Pakistan</title>
-  <meta name="description" content="Nexus Wave is a focused digital marketing agency from Hyderabad, Pakistan. Social media, paid ads, branding, web design, and AI-powered marketing."/>
-  <meta name="keywords" content="digital marketing agency Hyderabad Pakistan, social media management Hyderabad, Meta Ads Pakistan, Google Ads Hyderabad, branding agency Pakistan"/>
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml"/>
+  <title>Nexus Wave Media Agency | Digital Growth Studio</title>
+  <meta name="description" content="Nexus Wave is a digital growth studio from Hyderabad, Sindh, shaping how businesses are seen, understood, and chosen."/>
+  <meta name="keywords" content="digital growth studio, digital marketing agency Hyderabad, social media marketing, paid ads, web design, marketing automation"/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://nexuswavemediaagency.com/"/>
-  <meta property="og:type"        content="website"/>
-  <meta property="og:title"       content="Nexus Wave Media Agency"/>
-  <meta property="og:description" content="Focused digital marketing agency from Hyderabad, Pakistan."/>
-  <meta property="og:url"         content="https://nexuswavemediaagency.com/"/>
-
-  <!-- Schema -->
+  <meta name="theme-color" content="#050505"/>
+  <meta property="og:type" content="website"/>
+  <meta name="application-name" content="Nexus Wave Media Agency"/>
+  <meta property="og:site_name" content="Nexus Wave Media Agency"/>
+  <meta property="og:title" content="Nexus Wave Media Agency | Digital Growth Studio"/>
+  <meta property="og:description" content="You built the business. We shape how people see it."/>
+  <meta property="og:url" content="https://nexuswavemediaagency.com/"/>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MarketingAgency",
     "name": "Nexus Wave Media Agency",
     "url": "https://nexuswavemediaagency.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Sindh",
-      "addressCountry": "PK"
-    },
+    "address": {"@type": "PostalAddress", "addressLocality": "Hyderabad", "addressRegion": "Sindh", "addressCountry": "PK"},
     "telephone": "+923278263522",
     "email": "letschat@nexuswavemediaagency.com",
     "sameAs": ["https://instagram.com/nexuswavemedia"]
   }
   </script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/navbar.css"/>
-  <link rel="stylesheet" href="css/footer.css"/>
-  <link rel="stylesheet" href="css/responsive.css"/>
-  <link rel="stylesheet" href="css/animations.css"/>
   <link rel="stylesheet" href="css/pages/index.css"/>
-
+  <link rel="stylesheet" href="css/pages/index-polish.css"/>
 </head>
-<body>
-
-  <!-- ─── NAVBAR ─── -->
-  <nav id="navbar">
-    <a class="nav-logo" href="index.html">
-      <div class="nav-logo-mark">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
-          <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
-          <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
-          <line x1="2" y1="20" x2="38" y2="20" stroke="#3D3D3D" stroke-width="0.5"/>
-          <line x1="20" y1="2" x2="20" y2="38" stroke="#3D3D3D" stroke-width="0.5"/>
+<body class="premium-homepage is-loading">
+  <div class="intro-loader" id="introLoader" aria-hidden="true">
+    <div class="loader-noise"></div>
+    <div class="loader-brand">
+      <div class="loader-mark" aria-hidden="true">
+        <svg class="loader-globe" viewBox="0 0 120 120" focusable="false">
+          <circle class="loader-globe-ring" cx="60" cy="60" r="42"></circle>
+          <ellipse class="loader-globe-meridian" cx="60" cy="60" rx="15" ry="42"></ellipse>
+          <ellipse class="loader-globe-equator" cx="60" cy="60" rx="42" ry="15"></ellipse>
+          <path class="loader-globe-cross" d="M32 32L88 88M88 32L32 88"></path>
         </svg>
       </div>
-      <div class="nav-wordmark">Nexus Wave<span>Media Agency</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a class="btn-primary nav-cta" href="contact.html">Start a Project →</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"     onclick="closeMenu()">Home</a>
-    <a href="about.html"     onclick="closeMenu()">About</a>
-    <a href="portfolio.html" onclick="closeMenu()">Portfolio</a>
-    <a href="pricing.html"   onclick="closeMenu()">Pricing</a>
-    <a href="contact.html"   onclick="closeMenu()">Contact</a>
-    <a href="contact.html" class="btn-primary mob-cta" onclick="closeMenu()">Start a Project →</a>
+      <p>Nexus Wave</p>
+      <small>Digital Growth Studio</small>
+    </div>
+    <div class="loader-meter">
+      <div><span id="loaderCount">0</span><small>%</small></div>
+      <i><b id="loaderBar"></b></i>
+    </div>
   </div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
-  <!-- ─── HERO ─── -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="hero-eyebrow">Digital Marketing Agency · Hyderabad, Pakistan</div>
-      <h1 class="hero-headline">
-        Turning<br/>
-        <span class="jitter-word"
-              data-jitter
-              data-words="Brands,Startups,Restaurants,Schools,Retailers"
-              data-interval="2600">Brands</span><br/>
-        into Growth.
-      </h1>
-      <p class="hero-sub">
-        We build marketing systems that help brands stop relying on random posting
-        and inconsistent leads. Social, ads, automation, and web — done properly.
-      </p>
-      <div class="hero-btns">
-        <a class="btn-primary" href="contact.html">Start a Project →</a>
-        <a class="btn-outline" href="portfolio.html">See Real Work</a>
-      </div>
+  <header class="site-header" id="siteHeader">
+    <nav class="glass-nav" aria-label="Primary navigation">
+      <a class="brand brand-logo-link" href="index.html" aria-label="Nexus Wave Media Agency home">
+        <img class="brand-logo-image" src="images/nexus-wave-horizontal.svg" alt="NEXUS WAVE"/>
+      </a>
+      <ul class="desktop-nav">
+        <li><a href="index.html" aria-current="page">Home</a></li><li><a href="#services">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="nav-cta" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html" aria-current="page">Home</a><a href="#services">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a class="mobile-menu-cta" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a>
     </div>
+  </header>
 
-    <!-- Marquee -->
-    <div class="marquee-wrap">
-      <div class="marquee-row">
-        <div class="marquee-label">Worked With</div>
-        <div class="marquee-overflow">
-          <div class="marquee-track">
-            <span class="marquee-item"><span class="marquee-dot"></span>Maryam Montessori School</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Pak Care Surgicals</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Funky Wears</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Green Generation</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Ahim Foundation</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Changan Hyderabad Motors</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>The Zee Fragrance</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Scent-al-Hayat</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Zam Zam Clothes</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Elegance Academy</span>
-            <!-- duplicate for infinite loop -->
-            <span class="marquee-item"><span class="marquee-dot"></span>Maryam Montessori School</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Pak Care Surgicals</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Funky Wears</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Green Generation</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Ahim Foundation</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Changan Hyderabad Motors</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>The Zee Fragrance</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Scent-al-Hayat</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Zam Zam Clothes</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Elegance Academy</span>
+  <main id="main-content">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span></span> Digital Growth Studio</p>
+        <h1 id="hero-title" class="reveal">You built the business. <em>We shape how people see it.</em></h1>
+        <p class="hero-lede reveal">A good business should not feel unclear online. We help shape the words, visuals, pages, and moments that make people understand you faster, trust you sooner, and choose you with more confidence.</p>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="portfolio.html">See the Work <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note reveal"><span class="status-dot" aria-hidden="true"></span> Built with schools, local businesses, ecommerce brands, NGOs, and service-led teams.</div>
+      </div>
+      <div class="hero-system reveal" aria-label="Abstract Nexus Wave globe illustration">
+        <div class="system-glow" aria-hidden="true"></div>
+        <div class="globe-stage system-panel glass-card">
+          <div class="globe-kicker"><span>How people see you</span><span>Hyderabad · Remote-ready</span></div>
+          <div class="globe-sphere" aria-hidden="true">
+            <span class="globe-line globe-line-one"></span>
+            <span class="globe-line globe-line-two"></span>
+            <span class="globe-line globe-line-three"></span>
+            <span class="globe-axis globe-axis-one"></span>
+            <span class="globe-axis globe-axis-two"></span>
+            <span class="globe-node"></span>
+            <strong>NW</strong>
           </div>
+          <p class="globe-caption">Seen clearly. Felt properly. Chosen sooner.</p>
+        </div>
+        <div class="result-card glass-card">
+          <span>Education Awareness Campaign</span>
+          <strong>38.5K+ views</strong>
+          <small>37K+ reach · PKR 763 spent</small>
+          <p>Local awareness campaign for education visibility and admissions support.</p>
+          <div class="result-bar" aria-hidden="true"><i></i></div>
         </div>
       </div>
-      <div class="marquee-row">
-        <div class="marquee-label">Tools &amp; Platforms</div>
-        <div class="marquee-overflow">
-          <div class="marquee-track">
-            <span class="marquee-item"><span class="marquee-dot"></span>Meta Ads</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Google Ads</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Instagram</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>TikTok</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>LinkedIn</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp API</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Shopify</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Canva Pro</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Zapier</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>ChatGPT / AI Tools</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Google Analytics 4</span>
-            <!-- duplicate -->
-            <span class="marquee-item"><span class="marquee-dot"></span>Meta Ads</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Google Ads</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Instagram</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>TikTok</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>LinkedIn</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp API</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Shopify</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Canva Pro</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Zapier</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>ChatGPT / AI Tools</span>
-            <span class="marquee-item"><span class="marquee-dot"></span>Google Analytics 4</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── SERVICES ─── -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="sec-header reveal">
-        <div class="sec-num">01 — What We Do</div>
-        <h2 class="sec-title">Six services.<br/>One growth system.</h2>
-        <p class="sec-sub">Every service is built to work alone or together — all focused on real, measurable results.</p>
+    <section class="stats section-shell" aria-label="Studio statistics">
+      <div class="stats-glass reveal">
+        <div class="stat"><strong>10</strong><span>Confirmed clients</span></div><div class="stat"><strong>05</strong><span>Business types</span></div><div class="stat"><strong>HYD</strong><span>Home base</span></div><div class="stat"><strong>Remote-ready</strong><span>delivery</span></div>
       </div>
+    </section>
 
-      <div class="services-index">
-        <div class="svc-row reveal">
-          <div class="svc-num">01</div>
-          <div class="svc-name">Social Media Management</div>
-          <div class="svc-tags">
-            <span class="svc-tag">Strategy</span>
-            <span class="svc-tag">Content</span>
-            <span class="svc-tag">Growth</span>
-          </div>
-        </div>
-        <div class="svc-row reveal">
-          <div class="svc-num">02</div>
-          <div class="svc-name">Paid Advertising</div>
-          <div class="svc-tags">
-            <span class="svc-tag">Meta Ads</span>
-            <span class="svc-tag">Google</span>
-            <span class="svc-tag">TikTok</span>
-          </div>
-        </div>
-        <div class="svc-row reveal">
-          <div class="svc-num">03</div>
-          <div class="svc-name">Branding &amp; Identity</div>
-          <div class="svc-tags">
-            <span class="svc-tag">Visual</span>
-            <span class="svc-tag">Logo</span>
-            <span class="svc-tag">Guidelines</span>
-          </div>
-        </div>
-        <div class="svc-row reveal">
-          <div class="svc-num">04</div>
-          <div class="svc-name">Content Creation</div>
-          <div class="svc-tags">
-            <span class="svc-tag">Reels</span>
-            <span class="svc-tag">Graphics</span>
-            <span class="svc-tag">Copy</span>
-          </div>
-        </div>
-        <div class="svc-row reveal">
-          <div class="svc-num">05</div>
-          <div class="svc-name">Web &amp; eCommerce Design</div>
-          <div class="svc-tags">
-            <span class="svc-tag">Shopify</span>
-            <span class="svc-tag">Landing Pages</span>
-          </div>
-        </div>
-        <div class="svc-row reveal">
-          <div class="svc-num">06</div>
-          <div class="svc-name">AI-Powered Marketing</div>
-          <div class="svc-tags">
-            <span class="svc-tag">Chatbots</span>
-            <span class="svc-tag">Automation</span>
-          </div>
-        </div>
+    <section class="trusted section-shell" aria-labelledby="trusted-title">
+      <div class="section-intro compact reveal"><p class="section-kicker">Real businesses</p><h2 id="trusted-title">Selected clients</h2></div>
+      <!-- Text-only logo placeholders: replace with approved official client logo assets when available. -->
+      <div class="logo-row reveal" aria-label="Selected Nexus Wave clients">
+        <span>Zam Zam <b>Clothes</b></span><span>Pak Care <b>Surgicals</b></span><span>Funky <b>Wears</b></span><span>Green <b>Generation</b></span><span>Ahim <b>Foundation</b></span><span>Changan <b>Hyderabad Motors</b></span><span>The Zee <b>Fragrance</b></span><span>Elegance <b>Academy</b></span>
       </div>
+    </section>
 
-      <div class="services-cta reveal">
-        <a class="btn-primary" href="pricing.html">View Pricing &amp; Packages →</a>
-        <a class="btn-ghost" href="contact.html">Or just talk to us →</a>
+    <section class="services section-shell" id="services" aria-labelledby="services-title">
+      <div class="services-layout">
+        <div class="services-intro reveal">
+          <p class="section-kicker">Services</p>
+          <h2 id="services-title">What we <em>shape</em></h2>
+          <p>The work changes from brand to brand. The goal stays the same. Make your business clearer, sharper, and easier to choose.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card glass-card reveal"><div class="service-number">01</div><h3>Brand Presence</h3><p>How your business looks, sounds, and feels across every place people find you.</p><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card glass-card reveal"><div class="service-number">02</div><h3>Content Direction</h3><p>Posts, reels, graphics, and stories shaped around what your audience needs to understand.</p><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card glass-card reveal"><div class="service-number">03</div><h3>Campaigns</h3><p>Clear offers, clear audiences, and campaigns made for people who are ready to take the next step.</p><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card glass-card reveal"><div class="service-number">04</div><h3>Web Experience</h3><p>A website that explains the business when you are not there to explain it yourself.</p><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card glass-card reveal"><div class="service-number">05</div><h3>Visual Identity</h3><p>The small details people remember. Logo, layout, colors, type, and the overall feeling.</p><span class="service-arrow" aria-hidden="true">↗</span></article>
+          <article class="service-card glass-card reveal"><div class="service-number">06</div><h3>Systems</h3><p>Forms, follow-ups, and simple workflows that keep good inquiries from getting lost.</p><span class="service-arrow" aria-hidden="true">↗</span></article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── STATS ─── -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="sec-header reveal">
-        <div class="sec-num">02 — By The Numbers</div>
-        <h2 class="sec-title">The numbers<br/>speak.</h2>
+    <section class="selected-work section-shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading reveal">
+        <div><p class="section-kicker">Selected work</p><h2 id="work-title">Proof before <em>promises</em></h2></div>
+        <div class="section-side"><p>A few real projects from businesses we have helped shape, improve, and present with more clarity.</p><a class="text-link" href="portfolio.html">View the full portfolio <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="stats-row">
-        <div class="stat-item reveal">
-          <div class="stat-big">50+</div>
-          <div class="stat-label">Projects delivered across social, ads, design, and automation</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-big">20+</div>
-          <div class="stat-label">Clients served across Pakistan and internationally</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-big">6+</div>
-          <div class="stat-label">Industries — education, healthcare, retail, automotive, nonprofit, lifestyle</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-big">24/7</div>
-          <div class="stat-label">Automation systems running for clients around the clock</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PORTFOLIO PREVIEW ─── -->
-  <section class="portfolio-section" id="work">
-    <div class="container">
-      <div class="sec-header reveal">
-        <div class="sec-num">03 — Our Work</div>
-        <h2 class="sec-title">Real clients.<br/>Real results.</h2>
-        <p class="sec-sub">Work delivered across education, healthcare, automotive, fashion, and lifestyle brands.</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <a class="pcard reveal" href="portfolio.html">
-          <div class="pcard-inner">
-            <span class="pcard-tag">Education</span>
-            <div class="pcard-body">
-              <div class="pcard-service">Social Media + Meta Ads</div>
-              <div class="pcard-title">Maryam<br/>Montessori<br/>School</div>
-            </div>
-            <div class="pcard-ghost">01</div>
+      <div class="work-grid">
+        <a class="work-card work-card-large glass-card reveal" href="portfolio.html">
+          <!-- Placeholder artwork: replace with an approved Pak Care Surgicals asset when available. -->
+          <div class="work-visual visual-healthcare" aria-label="Abstract placeholder artwork for Pak Care Surgicals">
+            <span class="visual-index">01</span><strong>PCS</strong><i></i><i></i><i></i>
+            <div class="work-proof"><span>Support provided</span><strong>Website structure</strong><small>Catalog direction and medical commerce clarity</small></div>
           </div>
+          <div class="work-copy"><div><span>Medical Commerce</span><span>Website structure + catalog direction</span></div><h3>Pak Care Surgicals</h3><span class="work-arrow" aria-hidden="true">↗</span></div>
         </a>
-        <a class="pcard reveal" href="portfolio.html">
-          <div class="pcard-inner">
-            <span class="pcard-tag">Automotive</span>
-            <div class="pcard-body">
-              <div class="pcard-service">Social Media + Content</div>
-              <div class="pcard-title">Changan<br/>Hyderabad<br/>Motors</div>
-            </div>
-            <div class="pcard-ghost">02</div>
+        <a class="work-card glass-card reveal" href="portfolio.html">
+          <!-- Placeholder artwork: replace with an approved Changan Hyderabad Motors asset when available. -->
+          <div class="work-visual visual-automotive" aria-label="Abstract placeholder artwork for Changan Hyderabad Motors">
+            <span class="visual-index">02</span><strong>CHM</strong><i></i><i></i><i></i>
+            <div class="work-proof"><span>Support provided</span><strong>Digital presence support</strong><small>Website/GMB support</small></div>
           </div>
+          <div class="work-copy"><div><span>Automotive</span><span>Digital Marketing + Web/GMB support</span></div><h3>Changan Hyderabad Motors</h3><span class="work-arrow" aria-hidden="true">↗</span></div>
         </a>
-        <a class="pcard reveal" href="portfolio.html">
-          <div class="pcard-inner">
-            <span class="pcard-tag">Fashion</span>
-            <div class="pcard-body">
-              <div class="pcard-service">Design + Social</div>
-              <div class="pcard-title">Funky<br/>Wears</div>
-            </div>
-            <div class="pcard-ghost">03</div>
+        <a class="work-card glass-card reveal" href="portfolio.html">
+          <!-- Placeholder artwork: replace with an approved Funky Wears asset when available. -->
+          <div class="work-visual visual-fashion" aria-label="Abstract placeholder artwork for Funky Wears">
+            <span class="visual-index">03</span><strong>FW</strong><i></i><i></i><i></i>
+            <div class="work-proof"><span>Support provided</span><strong>Content direction</strong><small>Social media presence</small></div>
           </div>
+          <div class="work-copy"><div><span>Fashion/Ecommerce</span><span>Content + Social Media</span></div><h3>Funky Wears</h3><span class="work-arrow" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="work-card work-card-wide glass-card reveal" href="portfolio.html">
+          <!-- Placeholder artwork: replace with an approved Zam Zam Clothes asset when available. -->
+          <div class="work-visual visual-fashion" aria-label="Abstract placeholder artwork for Zam Zam Clothes">
+            <span class="visual-index">04</span><strong>ZZC</strong><i></i><i></i><i></i>
+            <div class="work-proof"><span>Support provided</span><strong>Brand clarity</strong><small>Content direction and product visibility</small></div>
+          </div>
+          <div class="work-copy"><div><span>Fashion/Retail</span><span>Content + Brand Presence</span></div><h3>Zam Zam Clothes</h3><span class="work-arrow" aria-hidden="true">↗</span></div>
         </a>
       </div>
+    </section>
 
-      <div class="reveal" style="text-align:center;">
-        <a class="btn-outline" href="portfolio.html">View Full Portfolio →</a>
+    <section class="process section-shell" id="process" aria-labelledby="process-title">
+      <div class="section-heading reveal">
+        <div><p class="section-kicker">Process</p><h2 id="process-title">How the work <em>takes shape</em></h2></div>
+        <p>Four simple stages keep the work clear, collaborative, and moving in the right direction.</p>
       </div>
+      <ol class="process-list">
+        <li class="process-item reveal"><span>01</span><div><h3>Understand</h3><p>We listen first. The business, the audience, the offer, and the gap between what you are and what people currently see.</p></div></li>
+        <li class="process-item reveal"><span>02</span><div><h3>Shape</h3><p>We turn scattered ideas into a clearer direction for content, pages, visuals, campaigns, and communication.</p></div></li>
+        <li class="process-item reveal"><span>03</span><div><h3>Build</h3><p>We create the pieces that bring the direction to life.</p></div></li>
+        <li class="process-item reveal"><span>04</span><div><h3>Refine</h3><p>We watch what feels strong, remove what feels weak, and keep making the brand sharper.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="final-cta section-shell" aria-labelledby="cta-title">
+      <div class="cta-glass reveal">
+        <p class="section-kicker">Ready when you are</p><h2 id="cta-title">Your next version should feel closer to the business you are building.</h2>
+        <p>Show us where your brand is right now. We will help you see what needs to change, what should stay, and what can be built next.</p>
+        <div class="cta-actions"><a class="button button-primary" href="https://wa.me/923278263522" target="_blank" rel="noopener">WhatsApp Us <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="contact.html">Start a Project</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <div class="footer-grid">
+      <div class="footer-brand"><a class="brand brand-logo-link" href="index.html" aria-label="Nexus Wave Media Agency home"><img class="brand-logo-image" src="images/nexus-wave-horizontal.svg" alt="NEXUS WAVE"/></a><p>Nexus Wave is a digital growth studio from Hyderabad, Sindh, shaping how businesses are seen, understood, and chosen.</p></div>
+      <div class="footer-column"><h3>Explore</h3><a href="#services">Services</a><a href="#work">Selected work</a><a href="#process">Process</a><a href="about.html">About</a></div>
+      <div class="footer-column"><h3>Pages</h3><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div>
+      <div class="footer-column footer-contact"><h3>Start a conversation</h3><a href="mailto:letschat@nexuswavemediaagency.com">letschat@nexuswavemediaagency.com</a><a href="mailto:nexuswavemediaagency@gmail.com">nexuswavemediaagency@gmail.com</a><a href="https://wa.me/923278263522" target="_blank" rel="noopener">+92 327 8263522</a><span>Hyderabad, Sindh, Pakistan</span></div>
     </div>
-  </section>
-
-  <!-- ─── TESTIMONIALS ─── -->
-  <section class="testi-section">
-    <div class="container">
-      <div class="sec-header reveal">
-        <div class="sec-num">04 — Client Words</div>
-        <h2 class="sec-title">What clients<br/>say.</h2>
-      </div>
-      <div class="testi-grid">
-
-        <div class="tcard reveal">
-          <div class="tcard-stars">★★★★★</div>
-          <p class="tcard-text">"Working with Nexus Wave was a great experience. They handled our social media with real creativity and consistency. Engagement increased noticeably."</p>
-          <div class="tcard-author">
-            <div class="tcard-avatar">FW</div>
-            <div>
-              <div class="tcard-name">Funky Wears</div>
-              <div class="tcard-role">Fashion Brand</div>
-            </div>
-          </div>
-        </div>
-        <div class="tcard reveal">
-          <div class="tcard-stars">★★★★★</div>
-          <p class="tcard-text">"Nexus Wave has been instrumental in taking our social media presence to the next level. We look forward to growing together."</p>
-          <div class="tcard-author">
-            <div class="tcard-avatar">GG</div>
-            <div>
-              <div class="tcard-name">Green Generation</div>
-              <div class="tcard-role">Sustainability Brand</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── WHY US ─── -->
-  <section class="why-section" id="why">
-    <div class="container">
-      <div class="sec-header reveal">
-        <div class="sec-num">05 — Why Nexus Wave</div>
-        <h2 class="sec-title">Sharp minds.<br/>Sharper results.</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-list">
-          <div class="why-item reveal">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>Proven Client Track Record</h4>
-              <p>Live campaigns, real clients, measurable results — across Pakistan and beyond.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>6 Services Under One Roof</h4>
-              <p>Social, ads, content, automation, web design, and AI tools — all by one team.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>Built Around Your Goals</h4>
-              <p>No copy-paste strategies. We go deep on your industry before we touch a single post.</p>
-            </div>
-          </div>
-          <div class="why-item reveal">
-            <div class="why-check">✓</div>
-            <div>
-              <h4>We Do the Actual Work</h4>
-              <p>Hands-on execution every step — not just strategy calls and slide decks.</p>
-            </div>
-          </div>
-        </div>
-        <div class="why-box reveal">
-          <h3>Real clients. Real campaigns. Results across multiple industries.</h3>
-          <p>From Hyderabad schools to international brands — we deliver across education, healthcare, automotive, fashion, lifestyle, and retail.</p>
-          <div class="bstat">
-            <div class="bnum">50+</div>
-            <div class="blabel">Projects delivered across social, ads, design, and automation</div>
-          </div>
-          <div class="bstat">
-            <div class="bnum">$15–$175</div>
-            <div class="blabel">Monthly plans — transparent USD pricing, worldwide</div>
-          </div>
-          <a class="btn-outline" href="about.html">Our Story →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── FAQ ─── -->
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <div class="sec-header reveal">
-        <div class="sec-num">06 — Questions</div>
-        <h2 class="sec-title">Common<br/>questions.</h2>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item reveal">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <h4>Do you work with international clients?</h4>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">Yes. We serve clients worldwide. All pricing is in USD for international clients. Communication is via WhatsApp and email. We have delivered work for clients outside Pakistan and are actively expanding our global portfolio.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <h4>Where are you based?</h4>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">We are based in Hyderabad, Sindh, Pakistan. We serve clients locally in Hyderabad and across Pakistan, as well as internationally via remote collaboration.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <h4>Do I need a long-term contract?</h4>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">No. All monthly retainers are month-to-month. We keep clients because of results, not locked contracts.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <h4>How quickly will I see results?</h4>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">Paid ads typically show initial results within 2 weeks. Social media growth takes 2–3 months for meaningful traction. Automation systems are live from day one.</div>
-          </div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q" onclick="toggleFaq(this)">
-            <h4>What industries do you work with?</h4>
-            <div class="faq-icon">+</div>
-          </div>
-          <div class="faq-a">
-            <div class="faq-a-inner">Education, healthcare, retail, automotive, nonprofit organizations, lifestyle, service businesses, and eCommerce. Based in Hyderabad but our work spans Pakistan and international markets.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── CONTACT ─── -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <div class="contact-left">
-          <div class="sec-num reveal">07 — Get In Touch</div>
-          <h2 class="sec-title reveal" style="margin-bottom:24px;">
-            First conversation<br/>is free.
-          </h2>
-          <p class="reveal">Tell us where you are. We'll tell you honestly what will move the needle — no pitch deck, no jargon.</p>
-          <div class="reveal">
-            <div class="contact-detail">
-              <span>WhatsApp</span>
-              <a href="https://wa.me/923278263522" target="_blank" rel="noopener">+92 327 8263522</a>
-            </div>
-            <div class="contact-detail">
-              <span>Email</span>
-              <a href="mailto:letschat@nexuswavemediaagency.com">letschat@nexuswavemediaagency.com</a>
-            </div>
-            <div class="contact-detail">
-              <span>Backup email</span>
-              <a href="mailto:nexuswavemediaagency@gmail.com">nexuswavemediaagency@gmail.com</a>
-            </div>
-            <div class="contact-detail">
-              <span>Location</span>
-              <span style="color:var(--g5);">Hyderabad, Sindh, Pakistan</span>
-            </div>
-          </div>
-        </div>
-        <div class="reveal">
-          <form class="cform" id="cForm" action="https://formspree.io/f/nexuswave" method="POST">
-            <div class="form-row">
-              <input class="cinput" type="text"  name="name"  placeholder="Your name"    required/>
-              <input class="cinput" type="email" name="email" placeholder="Email address" required/>
-            </div>
-            <input  class="cinput" type="text" name="business" placeholder="Business name (optional)"/>
-            <select class="cinput" name="service">
-              <option value="" disabled selected>What do you need help with?</option>
-              <option>Social Media Management</option>
-              <option>Paid Advertising</option>
-              <option>Branding &amp; Identity</option>
-              <option>Content Creation</option>
-              <option>Web &amp; eCommerce Design</option>
-              <option>AI-Powered Marketing</option>
-              <option>Not sure — let's talk</option>
-            </select>
-            <textarea class="cinput" name="message" placeholder="Tell us about your project..." rows="4"></textarea>
-            <button class="csub" type="submit" id="cBtn">Send Message →</button>
-            <div class="cmsg" id="cMsg"></div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── FOOTER ─── -->
-  <a class="wa-float" href="https://wa.me/923278263522" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-  </a>
-
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo-mark">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
-            <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
-            <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
-          </svg>
-        </div>
-        <div class="footer-wordmark">Nexus Wave</div>
-        <p class="footer-desc">A focused digital marketing agency operating from Hyderabad, Sindh, Pakistan. No bloated teams. No vague strategies. Just precise, measurable marketing that compounds over time.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h4>Pages</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <a href="pricing.html">Social Media</a>
-          <a href="pricing.html">Paid Ads</a>
-          <a href="pricing.html">Branding</a>
-          <a href="pricing.html">Web Design</a>
-          <a href="pricing.html">AI Marketing</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="https://wa.me/923278263522" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="mailto:letschat@nexuswavemediaagency.com">Primary email</a>
-          <a href="mailto:nexuswavemediaagency@gmail.com">Backup email</a>
-          <a href="https://instagram.com/nexuswavemedia" target="_blank">Instagram</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-left">© 2026 Nexus Wave Media Agency · Hyderabad, Sindh, Pakistan</div>
-      <div class="footer-bottom-right">Month-to-month · No contracts · USD pricing worldwide</div>
-    </div>
-    <div class="footer-bigword" aria-hidden="true">NEXUS WAVE</div>
+    <div class="footer-bottom"><span>© <span id="currentYear">2026</span> Nexus Wave Media Agency</span><span>Seen clearly · Felt properly · Chosen sooner</span></div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/navbar.js"></script>
-  <script src="js/animations.js"></script>
-  <script src="js/faq.js"></script>
-  <script src="js/script.js"></script>
+  <a class="whatsapp-float" href="https://wa.me/923278263522" target="_blank" rel="noopener" aria-label="Chat with Nexus Wave on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.9 9.9 0 0 1-1.51-5.26A9.89 9.89 0 0 1 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.41Z"/></svg>
+  </a>
+  <script src="js/homepage.js"></script>
 </body>
 </html>
