@@ -12,6 +12,11 @@
   headerStatsPolish.href = 'css/pages/index-header-stats-fix.css';
   document.head.appendChild(headerStatsPolish);
 
+  var brandMobilePolish = document.createElement('link');
+  brandMobilePolish.rel = 'stylesheet';
+  brandMobilePolish.href = 'css/pages/index-brand-mobile-polish.css';
+  document.head.appendChild(brandMobilePolish);
+
   function onReady(callback) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', callback, { once: true });
