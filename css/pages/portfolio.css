@@ -151,21 +151,21 @@
 
 .featured-grid {
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
 .featured-card {
-  min-height: 560px;
+  min-height: 500px;
   display: grid;
-  grid-template-rows: minmax(260px, 1fr) auto;
+  grid-template-rows: minmax(240px, .88fr) auto;
   overflow: hidden;
   border-radius: var(--radius-lg);
 }
-.featured-card-large { grid-row: span 2; }
+.featured-card-large { grid-row: auto; }
 
 .project-visual {
-  min-height: 320px;
+  min-height: 280px;
   padding: 28px;
   position: relative;
   overflow: hidden;
@@ -201,7 +201,7 @@
   bottom: 16px;
   color: rgba(244,245,240,.06);
   font-family: var(--serif);
-  font-size: clamp(72px, 10vw, 130px);
+  font-size: clamp(72px, 8vw, 112px);
   font-style: italic;
   font-weight: 400;
   letter-spacing: -.16em;
@@ -210,9 +210,10 @@
 .project-visual-medical { background: radial-gradient(circle at 76% 28%, rgba(255,255,255,.13), transparent 31%), linear-gradient(145deg, #111, #070707 70%); }
 .project-visual-education { background: radial-gradient(circle at 28% 76%, rgba(255,255,255,.12), transparent 31%), linear-gradient(145deg, #121212, #070707 68%); }
 .project-visual-auto { background: radial-gradient(circle at 72% 72%, rgba(255,255,255,.11), transparent 32%), linear-gradient(145deg, #101010, #060606 70%); }
+.project-visual-fashion { background: radial-gradient(circle at 28% 78%, rgba(255,255,255,.12), transparent 30%), linear-gradient(145deg, #121212, #070707 68%); }
 
 .project-copy {
-  padding: 28px;
+  padding: 26px;
 }
 .project-kicker {
   color: var(--muted-dark);
@@ -230,7 +231,7 @@
   letter-spacing: -.045em;
   line-height: 1.04;
 }
-.project-copy h3 { font-size: clamp(35px, 4vw, 56px); }
+.project-copy h3 { font-size: clamp(32px, 3.2vw, 46px); }
 .project-copy p {
   max-width: 560px;
   margin: 18px 0 0;
