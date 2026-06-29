@@ -3,334 +3,92 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- SEO -->
-  <title>Pricing — Nexus Wave Media Agency | USD Packages</title>
-  <meta name="description" content="Transparent USD pricing for social media management, Meta & Google Ads, web design, automation and AI marketing. Nexus Wave Media Agency, Hyderabad Pakistan — serving worldwide."/>
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml"/>
+  <title>Pricing | Nexus Wave Media Agency</title>
+  <meta name="description" content="Scope-first pricing for Nexus Wave Media Agency services. Choose the kind of support you need, then receive a clear proposal before work begins."/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://nexuswavemediaagency.com/pricing"/>
+  <meta name="theme-color" content="#050505"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://nexuswavemediaagency.com/pricing"/>
-  <meta property="og:title" content="Pricing — Nexus Wave Media Agency"/>
-  <meta property="og:description" content="Transparent USD pricing. Month-to-month, no contracts."/>
-
-  <!-- Schema -->
+  <meta property="og:site_name" content="Nexus Wave Media Agency"/>
+  <meta property="og:title" content="Pricing | Nexus Wave Media Agency"/>
+  <meta property="og:description" content="Pricing starts with scope: what needs to be shaped, built, and maintained."/>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Service","name":"Digital Marketing Services","provider":{"@type":"LocalBusiness","name":"Nexus Wave Media Agency","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Sindh","addressCountry":"PK"}},"areaServed":["Pakistan","Worldwide"],"serviceType":["Social Media Management","Paid Advertising","Web Design","Marketing Automation","AI Tools"],"offers":[{"@type":"Offer","name":"Social Media Starter","price":"55","priceCurrency":"USD","billingIncrement":"P1M"},{"@type":"Offer","name":"Social Media Growth","price":"100","priceCurrency":"USD","billingIncrement":"P1M"},{"@type":"Offer","name":"Social Media Authority","price":"175","priceCurrency":"USD","billingIncrement":"P1M"}]}
+  {"@context":"https://schema.org","@type":"Service","name":"Nexus Wave Media Agency Pricing","provider":{"@type":"MarketingAgency","name":"Nexus Wave Media Agency","url":"https://nexuswavemediaagency.com","telephone":"+923278263522","email":"letschat@nexuswavemediaagency.com","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Sindh","addressCountry":"PK"}},"areaServed":["Pakistan","Worldwide"],"serviceType":["Brand Presence","Content Direction","Campaigns","Web Experience","Visual Identity","Systems"]}
   </script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/navbar.css"/>
-  <link rel="stylesheet" href="css/footer.css"/>
-  <link rel="stylesheet" href="css/responsive.css"/>
-  <link rel="stylesheet" href="css/animations.css"/>
-  <link rel="stylesheet" href="css/pages/pricing.css"/>
-
+  <link rel="stylesheet" href="css/pages/index.css"/>
+  <link rel="stylesheet" href="css/pages/index-polish.css"/>
+  <link rel="stylesheet" href="css/pages/interior.css"/>
 </head>
-<body>
+<body class="premium-page pricing-page">
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
-  <!-- ─── NAVBAR ─── -->
-  <nav id="navbar">
-    <a class="nav-logo" href="index.html">
-      <div class="nav-logo-mark">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
-          <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
-          <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
-          <line x1="2" y1="20" x2="38" y2="20" stroke="#3D3D3D" stroke-width="0.5"/>
-          <line x1="20" y1="2" x2="20" y2="38" stroke="#3D3D3D" stroke-width="0.5"/>
-        </svg>
-      </div>
-      <div class="nav-wordmark">Nexus Wave<span>Media Agency</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="pricing.html" class="active">Pricing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a class="btn-primary nav-cta" href="contact.html">Start a Project →</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"     onclick="closeMenu()">Home</a>
-    <a href="about.html"     onclick="closeMenu()">About</a>
-    <a href="portfolio.html" onclick="closeMenu()">Portfolio</a>
-    <a href="pricing.html"   onclick="closeMenu()">Pricing</a>
-    <a href="contact.html"   onclick="closeMenu()">Contact</a>
-    <a href="contact.html" class="btn-primary mob-cta" onclick="closeMenu()">Start a Project →</a>
-  </div>
+  <header class="site-header" id="siteHeader">
+    <nav class="glass-nav" aria-label="Primary navigation">
+      <a class="brand brand-logo-link" href="index.html" aria-label="Nexus Wave Media Agency home"><img class="brand-logo-image" src="images/nexus-wave-horizontal.svg" alt="NEXUS WAVE"/></a>
+      <ul class="desktop-nav"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html" aria-current="page">Pricing</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+      <a class="nav-cta" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true"><a href="index.html">Home</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html" aria-current="page">Pricing</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="mobile-menu-cta" href="contact.html">Start a Project <span aria-hidden="true">↗</span></a></div>
+  </header>
 
-  <!-- ─── HERO ─── -->
-  <section class="price-hero">
-    <div class="label reveal" style="margin-bottom:24px;">Transparent Pricing</div>
-    <h1 class="reveal">Straightforward<br/>pricing.<br/><span class="display-italic">No surprises.</span></h1>
-    <p class="reveal">All prices in USD. Accessible to clients in Pakistan and worldwide. Month-to-month — no contracts.</p>
-  </section>
+  <main id="main-content">
+    <section class="page-hero section-shell" data-watermark="PRICING" aria-labelledby="pricing-title">
+      <div class="page-hero-copy">
+        <p class="eyebrow reveal"><span></span> Pricing</p>
+        <h1 id="pricing-title" class="reveal">Scope first. <em>Then the number.</em></h1>
+        <p class="page-lede reveal">Good pricing should be easy to understand. We start with what needs to be shaped, what needs to be built, and what level of support your business actually needs.</p>
+        <div class="page-actions reveal"><a class="button button-primary" href="contact.html">Request a proposal <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#pricing-options">See options</a></div>
+      </div>
+      <div class="page-hero-visual glass-card reveal" aria-hidden="true">
+        <div class="orbit-mark"><span></span><span></span><strong>NW</strong></div>
+        <div class="hero-note-card"><span>Pricing approach</span><strong>Clear scope before commitment.</strong><small>No fake packages. No vague retainers.</small></div>
+      </div>
+    </section>
 
-  <!-- ─── NOTE ─── -->
-  <div class="price-note">
-    All prices in USD — accessible to clients in Pakistan and internationally. Local PKR equivalents shown for reference. Ad spend (for paid ads plans) is separate and goes directly to the platform.
-  </div>
+    <section class="interior-section section-shell" id="pricing-options" aria-labelledby="pricing-options-title">
+      <div class="interior-heading reveal"><div><p class="section-kicker">Ways to work</p><h2 id="pricing-options-title">Choose the kind of support</h2></div><p>These are starting points for the conversation. After a short review, we send a clear scope, timeline, deliverables, and price before work begins.</p></div>
+      <div class="price-grid">
+        <article class="price-card glass-card reveal"><span class="price-label">01 · Presence</span><span class="price-mode">Scoped proposal</span><h3>Brand Presence Support</h3><p>For businesses that need their public-facing pages, profiles, and everyday communication to feel clearer and more consistent.</p><ul><li>Profile and page clarity</li><li>Content direction</li><li>Visual tone guidance</li><li>Monthly or short-term support</li></ul></article>
+        <article class="price-card glass-card reveal is-featured"><span class="price-label">02 · Monthly</span><span class="price-mode">Scoped proposal</span><h3>Content Direction Retainer</h3><p>For brands that need steady posts, reels, graphics, stories, and content planning without turning the brand into noise.</p><ul><li>Content calendar direction</li><li>Creative and caption support</li><li>Posting guidance or support</li><li>Review and refinement rhythm</li></ul></article>
+        <article class="price-card glass-card reveal"><span class="price-label">03 · Campaign</span><span class="price-mode">Scoped proposal</span><h3>Campaign Sprint</h3><p>For launches, admissions, offers, awareness, or focused promotions that need clean messaging and campaign assets.</p><ul><li>Offer and audience clarity</li><li>Campaign creative direction</li><li>Ad-ready content or landing flow</li><li>Simple reporting language</li></ul></article>
+        <article class="price-card glass-card reveal"><span class="price-label">04 · Website</span><span class="price-mode">Scoped proposal</span><h3>Web Experience Build</h3><p>For businesses that need a website or landing page that explains the offer clearly when no one is there to explain it.</p><ul><li>Page structure</li><li>Copy direction</li><li>Static website design</li><li>Contact path setup</li></ul></article>
+        <article class="price-card glass-card reveal"><span class="price-label">05 · Identity</span><span class="price-mode">Scoped proposal</span><h3>Visual Identity Package</h3><p>For brands that need a cleaner visual system: logo usage, type, layout, color direction, and the feeling people remember.</p><ul><li>Logo and mark direction</li><li>Typography and layout rules</li><li>Social template direction</li><li>Brand usage notes</li></ul></article>
+        <article class="price-card glass-card reveal"><span class="price-label">06 · Systems</span><span class="price-mode">Scoped proposal</span><h3>Forms & Follow-up Setup</h3><p>For businesses losing inquiries across scattered DMs, forms, emails, or manual follow-ups.</p><ul><li>Lead capture flow</li><li>WhatsApp or email routing</li><li>Simple workflow setup</li><li>Inquiry handoff guidance</li></ul></article>
+      </div>
+    </section>
 
-  <!-- ─── SOCIAL MEDIA ─── -->
-  <section class="pricing-section">
-    <div class="sec-header reveal">
-      <div class="sec-num">01 — Social Media</div>
-      <h2 class="sec-title">Social Media<br/>Management</h2>
-      <p class="sec-sub">Consistent, professional social media handled end-to-end. All plans include content creation, scheduling, and monthly reporting.</p>
-    </div>
-    <div class="plans-grid">
-      <!-- Starter -->
-      <div class="plan reveal">
-        <div class="plan-name">Starter</div>
-        <div class="plan-price"><sup>$</sup>55</div>
-        <div class="plan-period">per month</div>
-        <div class="plan-pkr">≈ PKR 15,000 / month</div>
-        <div class="plan-desc">For small businesses getting started with social media.</div>
-        <ul class="plan-features">
-          <li>12 posts per month (3/week)</li>
-          <li>1 platform (Instagram or Facebook)</li>
-          <li>Custom graphics &amp; captions</li>
-          <li>Monthly performance report</li>
-          <li>WhatsApp support</li>
-        </ul>
-        <a class="plan-cta" href="https://wa.me/923278263522?text=Hi%2C+I%27m+interested+in+the+Starter+plan" target="_blank" rel="noopener">Get Started →</a>
+    <section class="interior-section section-shell" aria-labelledby="quote-title">
+      <div class="split-heading reveal"><div><p class="section-kicker">What affects price</p><h2 id="quote-title">The quote follows the work</h2></div><p>Instead of forcing every business into the same package, we price around what has to be done well.</p></div>
+      <div class="quote-strip reveal">
+        <div class="quote-factor"><span>01</span><h3>Scope</h3><p>How many pages, pieces, campaigns, or systems need to be shaped.</p></div>
+        <div class="quote-factor"><span>02</span><h3>Depth</h3><p>Whether the work is a light cleanup, a full direction, or a build from scratch.</p></div>
+        <div class="quote-factor"><span>03</span><h3>Rhythm</h3><p>Whether you need a one-time project, a sprint, or ongoing support.</p></div>
+        <div class="quote-factor"><span>04</span><h3>Inputs</h3><p>What assets, access, approvals, and content already exist before we begin.</p></div>
       </div>
-      <!-- Growth (featured) -->
-      <div class="plan featured reveal">
-        <div class="plan-badge">Most Popular</div>
-        <div class="plan-name">Growth</div>
-        <div class="plan-price"><sup>$</sup>100</div>
-        <div class="plan-period">per month</div>
-        <div class="plan-pkr">≈ PKR 28,000 / month</div>
-        <div class="plan-desc">For growing businesses that need consistent, high-quality presence.</div>
-        <ul class="plan-features">
-          <li>20 posts per month (5/week)</li>
-          <li>2 platforms (IG + FB or TikTok)</li>
-          <li>Reels / short-form video included</li>
-          <li>Community management</li>
-          <li>Bi-weekly reports + strategy call</li>
-          <li>Story content included</li>
-          <li>Priority WhatsApp support</li>
-        </ul>
-        <a class="plan-cta" href="https://wa.me/923278263522?text=Hi%2C+I%27m+interested+in+the+Growth+plan" target="_blank" rel="noopener">Get Started →</a>
-      </div>
-      <!-- Authority -->
-      <div class="plan reveal">
-        <div class="plan-name">Authority</div>
-        <div class="plan-price"><sup>$</sup>175</div>
-        <div class="plan-period">per month</div>
-        <div class="plan-pkr">≈ PKR 48,000 / month</div>
-        <div class="plan-desc">For established brands that need full creative and strategic ownership.</div>
-        <ul class="plan-features">
-          <li>30+ posts per month</li>
-          <li>3 platforms (IG + FB + LinkedIn/TikTok)</li>
-          <li>Full video reels production</li>
-          <li>Monthly strategy sessions</li>
-          <li>Full community management</li>
-          <li>Influencer coordination</li>
-          <li>Weekly detailed reports</li>
-          <li>Dedicated account manager</li>
-        </ul>
-        <a class="plan-cta" href="https://wa.me/923278263522?text=Hi%2C+I%27m+interested+in+the+Authority+plan" target="_blank" rel="noopener">Get Started →</a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ─── PAID ADS ─── -->
-  <section class="pricing-section dark">
-    <div class="sec-header reveal">
-      <div class="sec-num">02 — Paid Advertising</div>
-      <h2 class="sec-title">Meta &amp; Google<br/>Ads Management</h2>
-      <p class="sec-sub">Ad spend is paid directly to the platform. These fees cover full campaign setup, creative, and management.</p>
-    </div>
-    <div class="plans-grid">
-      <!-- Launch -->
-      <div class="plan reveal">
-        <div class="plan-name">Launch</div>
-        <div class="plan-price"><sup>$</sup>65</div>
-        <div class="plan-period">per month</div>
-        <div class="plan-pkr">≈ PKR 18,000 / month</div>
-        <div class="plan-desc">For businesses running their first paid campaigns.</div>
-        <ul class="plan-features">
-          <li>1 campaign (Meta or Google)</li>
-          <li>Audience research &amp; setup</li>
-          <li>2 ad creatives per month</li>
-          <li>Basic A/B testing</li>
-          <li>Monthly performance report</li>
-          <li>Min. recommended ad spend: $50/mo</li>
-        </ul>
-        <a class="plan-cta" href="https://wa.me/923278263522?text=Hi%2C+I%27m+interested+in+Ads+Launch+plan" target="_blank" rel="noopener">Get Started →</a>
-      </div>
-      <!-- Scale (featured) -->
-      <div class="plan featured reveal">
-        <div class="plan-badge">Best Value</div>
-        <div class="plan-name">Scale</div>
-        <div class="plan-price"><sup>$</sup>125</div>
-        <div class="plan-period">per month</div>
-        <div class="plan-pkr">≈ PKR 35,000 / month</div>
-        <div class="plan-desc">For businesses ready to aggressively grow leads and sales.</div>
-        <ul class="plan-features">
-          <li>Meta + Google Ads combined</li>
-          <li>Full funnel strategy</li>
-          <li>4–6 ad creatives per month</li>
-          <li>Retargeting campaigns</li>
-          <li>Weekly optimisation</li>
-          <li>Detailed ROI reporting</li>
-          <li>Min. recommended ad spend: $100/mo</li>
-        </ul>
-        <a class="plan-cta" href="https://wa.me/923278263522?text=Hi%2C+I%27m+interested+in+Ads+Scale+plan" target="_blank" rel="noopener">Get Started →</a>
-      </div>
-      <!-- Dominate -->
-      <div class="plan reveal">
-        <div class="plan-name">Dominate</div>
-        <div class="plan-price" style="font-size:44px;letter-spacing:-2px;">Custom</div>
-        <div class="plan-period">tailored quote</div>
-        <div class="plan-pkr">For $300+/mo ad spend budgets</div>
-        <div class="plan-desc">For brands spending $300+ per month on ads who need full management.</div>
-        <ul class="plan-features">
-          <li>All platforms — Meta, Google, TikTok</li>
-          <li>Dedicated ads strategist</li>
-          <li>Daily campaign monitoring</li>
-          <li>Full creative production team</li>
-          <li>Landing page optimisation</li>
-          <li>CRM &amp; lead tracking integration</li>
-          <li>Weekly strategy calls</li>
-        </ul>
-        <a class="plan-cta" href="https://wa.me/923278263522?text=Hi%2C+I%27m+interested+in+Ads+Dominate+plan" target="_blank" rel="noopener">Discuss →</a>
-      </div>
-    </div>
-  </section>
+    <section class="interior-section section-shell" aria-labelledby="pricing-note-title">
+      <div class="note-card glass-card reveal"><h2 id="pricing-note-title">You should know what you are paying for.</h2><p>Every proposal explains deliverables, timeline, what we need from you, and what is not included. If a smaller scope is enough, we will say that. If the work needs more foundation first, we will say that too.</p></div>
+    </section>
 
-  <!-- ─── ADD-ONS ─── -->
-  <section class="pricing-section">
-    <div class="sec-header reveal">
-      <div class="sec-num">03 — Add-On Services</div>
-      <h2 class="sec-title">One-off services<br/>you can bolt on.</h2>
-      <p class="sec-sub">Standalone services available separately or combined with any monthly plan.</p>
-    </div>
-    <div class="addon-grid">
-      <div class="addon-card reveal">
-        <div class="addon-name">Website Design</div>
-        <div class="addon-price">From $125</div>
-        <div class="addon-pkr">≈ PKR 35,000</div>
-        <p class="addon-desc">Fast, mobile-first business websites built to generate leads. Includes up to 5 pages, contact form, and SEO setup.</p>
-      </div>
-      <div class="addon-card reveal">
-        <div class="addon-name">eCommerce / Shopify Store</div>
-        <div class="addon-price">From $215</div>
-        <div class="addon-pkr">≈ PKR 60,000</div>
-        <p class="addon-desc">Full Shopify or WooCommerce store with product pages, payment integration, and mobile optimisation.</p>
-      </div>
-      <div class="addon-card reveal">
-        <div class="addon-name">WhatsApp Automation Bot</div>
-        <div class="addon-price">From $70</div>
-        <div class="addon-pkr">≈ PKR 20,000</div>
-        <p class="addon-desc">AI-powered WhatsApp bot for lead capture, FAQ answering, and follow-up sequences.</p>
-      </div>
-      <div class="addon-card reveal">
-        <div class="addon-name">AI Chatbot (Website)</div>
-        <div class="addon-price">From $90</div>
-        <div class="addon-pkr">≈ PKR 25,000</div>
-        <p class="addon-desc">Custom trained chatbot for your website that answers questions, qualifies leads, and books calls.</p>
-      </div>
-      <div class="addon-card reveal">
-        <div class="addon-name">Reels / Video Production</div>
-        <div class="addon-price">$18 / reel</div>
-        <div class="addon-pkr">≈ PKR 5,000 per reel</div>
-        <p class="addon-desc">Scripted, edited short-form video content for Instagram Reels and TikTok.</p>
-      </div>
-      <div class="addon-card reveal">
-        <div class="addon-name">SEO Setup Package</div>
-        <div class="addon-price">From $65</div>
-        <div class="addon-pkr">≈ PKR 18,000</div>
-        <p class="addon-desc">Google Business Profile, schema markup, meta tags, sitemap, and Search Console setup.</p>
-      </div>
-      <div class="addon-card reveal">
-        <div class="addon-name">Brand Identity Design</div>
-        <div class="addon-price">From $43</div>
-        <div class="addon-pkr">≈ PKR 12,000</div>
-        <p class="addon-desc">Logo, colour palette, typography, and brand guidelines as editable Canva or Figma kit.</p>
-      </div>
-      <div class="addon-card reveal">
-        <div class="addon-name">Email / CRM Automation</div>
-        <div class="addon-price">From $55</div>
-        <div class="addon-pkr">≈ PKR 15,000</div>
-        <p class="addon-desc">Lead follow-up email sequences, CRM setup, and automated pipelines.</p>
-      </div>
-    </div>
-  </section>
+    <section class="interior-section section-shell page-footer-spacer" aria-labelledby="pricing-cta-title">
+      <div class="final-panel glass-card reveal"><p class="section-kicker">Start with clarity</p><h2 id="pricing-cta-title">Send the current state of your brand. We will suggest the right scope.</h2><p>No pressure. Just a clear look at what should change, what can wait, and what can be built next.</p><div class="cta-actions"><a class="button button-primary" href="contact.html">Request a proposal <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="https://wa.me/923278263522" target="_blank" rel="noopener">WhatsApp Us</a></div></div>
+    </section>
+  </main>
 
-  <!-- ─── CTA ─── -->
-  <div class="price-cta">
-    <h2 class="reveal">Not sure what<br/>you need?</h2>
-    <p class="reveal">Tell us about your business. We'll give you a straight answer — no pressure, no pitch deck.</p>
-    <div class="price-cta-btns reveal">
-      <a class="btn-primary" href="contact.html">Get a Free Consultation →</a>
-      <a class="btn-outline" href="https://wa.me/923278263522" target="_blank" rel="noopener">WhatsApp Us</a>
-    </div>
-  </div>
-
-  <!-- ─── FOOTER ─── -->
-  <a class="wa-float" href="https://wa.me/923278263522" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-  </a>
-
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo-mark">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
-            <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
-            <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
-          </svg>
-        </div>
-        <div class="footer-wordmark">Nexus Wave</div>
-        <p class="footer-desc">A focused digital marketing agency operating from Hyderabad, Sindh, Pakistan. No bloated teams. No vague strategies. Just precise, measurable marketing that compounds over time.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h4>Pages</h4>
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <a href="pricing.html">Social Media</a>
-          <a href="pricing.html">Paid Ads</a>
-          <a href="pricing.html">Branding</a>
-          <a href="pricing.html">Web Design</a>
-          <a href="pricing.html">AI Marketing</a>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <a href="https://wa.me/923278263522" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="mailto:letschat@nexuswavemediaagency.com">Primary email</a>
-          <a href="mailto:nexuswavemediaagency@gmail.com">Backup email</a>
-          <a href="https://instagram.com/nexuswavemedia" target="_blank">Instagram</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-left">© 2026 Nexus Wave Media Agency · Hyderabad, Sindh, Pakistan</div>
-      <div class="footer-bottom-right">Month-to-month · No contracts · USD pricing worldwide</div>
-    </div>
-    <div class="footer-bigword" aria-hidden="true">NEXUS WAVE</div>
+  <footer class="site-footer section-shell">
+    <div class="footer-grid"><div class="footer-brand"><a class="brand brand-logo-link" href="index.html" aria-label="Nexus Wave Media Agency home"><img class="brand-logo-image" src="images/nexus-wave-horizontal.svg" alt="NEXUS WAVE"/></a><p>Nexus Wave is a digital growth studio from Hyderabad, Sindh, shaping how businesses are seen, understood, and chosen.</p></div><div class="footer-column"><h3>Explore</h3><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="index.html#process">Process</a><a href="about.html">About</a></div><div class="footer-column"><h3>Pages</h3><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a></div><div class="footer-column footer-contact"><h3>Start a conversation</h3><a href="mailto:letschat@nexuswavemediaagency.com">letschat@nexuswavemediaagency.com</a><a href="mailto:nexuswavemediaagency@gmail.com">nexuswavemediaagency@gmail.com</a><a href="https://wa.me/923278263522" target="_blank" rel="noopener">+92 327 8263522</a><span>Hyderabad, Sindh, Pakistan</span></div></div>
+    <div class="footer-bottom"><span>© <span id="currentYear">2026</span> Nexus Wave Media Agency</span><span>Seen clearly · Felt properly · Chosen sooner</span></div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/navbar.js"></script>
-  <script src="js/animations.js"></script>
+  <a class="whatsapp-float" href="https://wa.me/923278263522" target="_blank" rel="noopener" aria-label="Chat with Nexus Wave on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35M12.05 21.79h-.01a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.9 9.9 0 0 1-1.51-5.26A9.89 9.89 0 0 1 12.05 2c2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.9 11.9 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.41Z"/></svg></a>
+  <script src="js/homepage.js"></script>
 </body>
 </html>
