@@ -211,6 +211,7 @@
 .project-visual-education { background: radial-gradient(circle at 28% 76%, rgba(255,255,255,.12), transparent 31%), linear-gradient(145deg, #121212, #070707 68%); }
 .project-visual-auto { background: radial-gradient(circle at 72% 72%, rgba(255,255,255,.11), transparent 32%), linear-gradient(145deg, #101010, #060606 70%); }
 .project-visual-fashion { background: radial-gradient(circle at 28% 78%, rgba(255,255,255,.12), transparent 30%), linear-gradient(145deg, #121212, #070707 68%); }
+.project-visual-public { background: radial-gradient(circle at 70% 22%, rgba(255,255,255,.12), transparent 31%), linear-gradient(145deg, #121212, #060606 68%); }
 
 .project-copy {
   padding: 26px;
