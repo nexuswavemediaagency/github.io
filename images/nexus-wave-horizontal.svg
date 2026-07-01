@@ -1,16 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 284 62" role="img" aria-label="NEXUS WAVE">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" role="img" aria-label="NEXUS WAVE">
   <defs>
-    <linearGradient id="nwGlass" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".18"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity=".035"/>
-    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.36"/>
+    </filter>
   </defs>
-  <g fill="none" fill-rule="evenodd">
-    <rect x=".75" y=".75" width="60.5" height="60.5" rx="18" fill="url(#nwGlass)" stroke="#f4f5f0" stroke-opacity=".22" stroke-width="1.5"/>
-    <circle cx="31" cy="31" r="19" stroke="#f4f5f0" stroke-opacity=".9" stroke-width="1.85"/>
-    <ellipse cx="31" cy="31" rx="7.3" ry="19" stroke="#f4f5f0" stroke-opacity=".62" stroke-width="1.35"/>
-    <ellipse cx="31" cy="31" rx="19" ry="7.3" stroke="#f4f5f0" stroke-opacity=".38" stroke-width="1.35"/>
-    <path d="M19.7 19.7l22.6 22.6M42.3 19.7L19.7 42.3" stroke="#f4f5f0" stroke-opacity=".28" stroke-width="1.2" stroke-linecap="round"/>
-    <text x="78" y="39" fill="#f4f5f0" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="500" letter-spacing="2.4">NEXUS WAVE</text>
+  <g filter="url(#softShadow)">
+    <rect x="0" y="8" width="80" height="80" rx="22" fill="#f7f7f2"/>
+    <image href="../assets/brand/nexus-wave-logo.png" x="8" y="8" width="64" height="80" preserveAspectRatio="xMidYMid meet"/>
   </g>
+  <text x="98" y="43" fill="#f4f5f0" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="4">NEXUS WAVE</text>
+  <text x="100" y="66" fill="#a0a29b" font-family="Inter, Arial, Helvetica, sans-serif" font-size="9" font-weight="700" letter-spacing="3.4">MEDIA AGENCY</text>
 </svg>
