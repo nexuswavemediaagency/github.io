@@ -1,17 +1,7 @@
-/* Final Nexus Wave brand polish. Kimi reference was used only as moodboard-level visual inspiration. */
+/* Final Nexus Wave brand polish.
+   Keep this file scoped: do not alter the desktop hero/world composition. */
 :root {
   --brand-white: #f6f6f1;
-  --brand-muted: rgba(246,246,241,.68);
-  --brand-soft: rgba(246,246,241,.1);
-  --brand-glass: rgba(10,10,10,.56);
-  --brand-line: rgba(255,255,255,.14);
-}
-
-body {
-  background:
-    radial-gradient(circle at 72% 12%, rgba(255,255,255,.065), transparent 30%),
-    radial-gradient(circle at 8% 46%, rgba(255,255,255,.035), transparent 28%),
-    #050505;
 }
 
 .brand-logo-link {
@@ -84,110 +74,6 @@ body {
   mix-blend-mode: screen;
 }
 
-.hero {
-  min-height: min(920px, 100svh);
-  gap: clamp(48px, 6vw, 96px);
-}
-
-.hero h1 {
-  max-width: 980px;
-  font-size: clamp(54px, 6vw, 94px);
-  line-height: .98;
-  letter-spacing: -.056em;
-}
-
-.hero h1 em {
-  font-style: italic;
-  color: rgba(246,246,241,.62);
-}
-
-.hero-lede {
-  max-width: 680px;
-  color: rgba(246,246,241,.7);
-}
-
-.hero .eyebrow > span,
-.section-kicker > span,
-.eyebrow > span {
-  width: 7px !important;
-  height: 7px !important;
-  flex: 0 0 7px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.76) !important;
-  box-shadow: 0 0 18px rgba(255,255,255,.2) !important;
-}
-
-.hero .eyebrow {
-  letter-spacing: .16em;
-}
-
-.globe-stage.system-panel {
-  border-color: rgba(255,255,255,.14) !important;
-  background:
-    radial-gradient(circle at 50% 35%, rgba(255,255,255,.065), transparent 44%),
-    linear-gradient(145deg, rgba(255,255,255,.062), rgba(255,255,255,.018)) !important;
-}
-
-.globe-caption {
-  position: relative;
-  z-index: 5;
-  max-width: 64%;
-  color: rgba(246,246,241,.76) !important;
-}
-
-.hero-system .result-card {
-  left: auto !important;
-  right: 20px !important;
-  top: 51% !important;
-  bottom: auto !important;
-  width: min(230px, 44%) !important;
-  padding: 16px !important;
-  transform: translateY(-50%) !important;
-  border-color: rgba(255,255,255,.14) !important;
-  background: rgba(7,7,7,.84) !important;
-}
-
-.hero-system .result-card strong {
-  font-size: clamp(25px, 2.2vw, 31px) !important;
-}
-
-.hero-system .result-card p {
-  margin: 10px 0 0;
-  color: rgba(246,246,241,.58);
-  font-size: 11px;
-  line-height: 1.55;
-}
-
-.service-card,
-.work-card,
-.stats-glass,
-.logo-row,
-.cta-glass,
-.glass-card {
-  border-color: rgba(255,255,255,.12);
-}
-
-.service-card {
-  min-height: 268px !important;
-}
-
-.service-card h3 {
-  font-size: clamp(25px, 2.3vw, 34px);
-}
-
-.service-card p {
-  color: rgba(246,246,241,.62);
-}
-
-.stats-glass {
-  background: linear-gradient(145deg, rgba(255,255,255,.045), rgba(255,255,255,.018));
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.055), 0 24px 80px rgba(0,0,0,.24);
-}
-
-.logo-row span {
-  color: rgba(246,246,241,.74);
-}
-
 @media (max-width: 1024px), (pointer: coarse), (prefers-reduced-motion: reduce) {
   .cursor-glow { display: none !important; }
 }
@@ -239,9 +125,6 @@ body {
   .globe-stage.system-panel {
     min-height: 350px !important;
     padding: 16px !important;
-    background:
-      radial-gradient(circle at 48% 34%, rgba(255,255,255,.055), transparent 45%),
-      linear-gradient(145deg, rgba(12,12,12,.94), rgba(4,4,4,.98)) !important;
   }
 
   .globe-sphere {
@@ -250,7 +133,7 @@ body {
   }
 
   .globe-caption {
-    max-width: 100%;
+    max-width: 100% !important;
     font-size: 18px !important;
   }
 
@@ -260,16 +143,7 @@ body {
     width: 100% !important;
     max-width: none !important;
     margin: 12px 0 0 !important;
-    padding: 14px !important;
     transform: none !important;
-  }
-
-  .hero-system .result-card strong {
-    font-size: 25px !important;
-  }
-
-  .service-card {
-    min-height: 0 !important;
   }
 }
 
