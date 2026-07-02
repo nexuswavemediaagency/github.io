@@ -17,6 +17,11 @@
   brandMobilePolish.href = 'css/pages/index-brand-mobile-polish.css';
   document.head.appendChild(brandMobilePolish);
 
+  var finalBrandPolish = document.querySelector('link[href="css/pages/final-brand-polish.css"]');
+  if (finalBrandPolish) {
+    document.head.appendChild(finalBrandPolish);
+  }
+
   function onReady(callback) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', callback, { once: true });
