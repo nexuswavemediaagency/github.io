@@ -17,11 +17,6 @@
   brandMobilePolish.href = 'css/pages/index-brand-mobile-polish.css';
   document.head.appendChild(brandMobilePolish);
 
-  var finalBrandPolish = document.createElement('link');
-  finalBrandPolish.rel = 'stylesheet';
-  finalBrandPolish.href = 'css/pages/final-brand-polish.css';
-  document.head.appendChild(finalBrandPolish);
-
   function onReady(callback) {
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', callback, { once: true });
@@ -74,72 +69,6 @@
     });
   }
 
-  function applyHomepageCopy() {
-    if (!document.body.classList.contains('premium-homepage')) return;
-
-    var heroTitle = document.getElementById('hero-title');
-    var heroLede = document.querySelector('.hero-lede');
-    var secondaryButton = document.querySelector('.hero-actions .button-secondary');
-    var description = document.querySelector('meta[name="description"]');
-    var ogDescription = document.querySelector('meta[property="og:description"]');
-    var serviceIntro = document.querySelector('.services-intro > p:last-child');
-    var serviceCards = document.querySelectorAll('.service-card');
-    var services = [
-      {
-        title: 'Social Media Management',
-        body: 'Plan and manage consistent social posts, captions, basic reporting, and daily presence without random posting.'
-      },
-      {
-        title: 'Paid Advertising',
-        body: 'Clear campaign setup for Meta or Google with practical offers, audiences, creative direction, inquiry tracking, and readable reporting.'
-      },
-      {
-        title: 'Content Creation & Reels',
-        body: 'Scripts, short-form edits, graphics, carousels, stories, and content ideas shaped around what people need to understand.'
-      },
-      {
-        title: 'Website Design & Development',
-        body: 'Static websites and landing pages that explain the business clearly and guide people toward the next step.'
-      },
-      {
-        title: 'Google Profile, SEO & Local Visibility',
-        body: 'Google Business Profile basics, metadata, local search signals, and cleaner visibility for people searching nearby.'
-      },
-      {
-        title: 'Automation & Lead Systems',
-        body: 'Forms, WhatsApp paths, follow-ups, reminders, and simple sheets that help inquiries keep moving.'
-      }
-    ];
-
-    if (heroTitle) {
-      heroTitle.innerHTML = 'Digital marketing, websites, and systems for businesses ready to <em>look clearer and grow smarter.</em>';
-    }
-    if (heroLede) {
-      heroLede.textContent = 'Nexus Wave helps businesses improve how they appear online through content, campaigns, websites, Google visibility, and simple systems that keep inquiries moving.';
-    }
-    if (secondaryButton) {
-      secondaryButton.innerHTML = 'See Our Work <span aria-hidden="true">↗</span>';
-    }
-    if (description) {
-      description.setAttribute('content', 'Nexus Wave Media Agency helps businesses improve how they appear online through content, campaigns, websites, Google visibility, and simple systems that keep inquiries moving.');
-    }
-    if (ogDescription) {
-      ogDescription.setAttribute('content', 'Digital marketing, websites, and systems for businesses ready to look clearer and grow smarter.');
-    }
-    if (serviceIntro) {
-      serviceIntro.textContent = 'Clear digital services for the places people meet your business: social media, ads, content, websites, Google visibility, and inquiry systems.';
-    }
-
-    serviceCards.forEach(function (card, index) {
-      var item = services[index];
-      if (!item) return;
-      var heading = card.querySelector('h3');
-      var copy = card.querySelector('p');
-      if (heading) heading.textContent = item.title;
-      if (copy) copy.textContent = item.body;
-    });
-  }
-
   ensureBrandMetadata();
 
   onReady(function () {
@@ -160,7 +89,6 @@
     ensureBrandMetadata();
     normalizeBrandImages();
     normalizeServiceLinks();
-    applyHomepageCopy();
 
     if (year) year.textContent = String(new Date().getFullYear());
 
