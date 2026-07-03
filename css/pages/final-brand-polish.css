@@ -78,6 +78,17 @@
   .cursor-glow { display: none !important; }
 }
 
+@media (min-width: 821px) {
+  .hero-system .result-card {
+    width: 198px !important;
+    padding: 13px !important;
+    right: 14px !important;
+    top: 70px !important;
+    left: auto !important;
+    bottom: auto !important;
+  }
+}
+
 @media (max-width: 820px) {
   .brand-logo-image {
     width: clamp(158px, 43vw, 194px) !important;
