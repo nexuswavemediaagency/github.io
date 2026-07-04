@@ -455,3 +455,135 @@
 .portfolio-project-card .project-tags span { font-size: 9px; }
 @media (max-width: 1080px) { .portfolio-cover-grid { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .portfolio-cover-grid .project-visual { min-height: 240px; } }
+
+
+/* PR #14 premium CSS-built portfolio covers. */
+.project-visual {
+  isolation: isolate;
+}
+.project-visual::before {
+  background-size: 34px 34px, 34px 34px, auto, auto;
+}
+.project-visual-medical,
+.project-visual-fashion,
+.project-visual-auto,
+.project-visual-community,
+.project-visual-education,
+.project-visual-food,
+.project-visual-architecture {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.028) 1px, transparent 1px),
+    radial-gradient(circle at 74% 24%, rgba(255,255,255,.1), transparent 31%),
+    linear-gradient(145deg, #111, #060606 72%) !important;
+  background-size: 36px 36px, 36px 36px, auto, auto !important;
+}
+.project-visual-fashion { background-position: 0 0, 0 0, 24% 78%, 0 0 !important; }
+.project-visual-auto { background-position: 0 0, 0 0, 72% 70%, 0 0 !important; }
+.project-visual-community { background-position: 0 0, 0 0, 28% 68%, 0 0 !important; }
+.project-visual-education { background-position: 0 0, 0 0, 68% 30%, 0 0 !important; }
+.project-visual-food { background-position: 0 0, 0 0, 76% 76%, 0 0 !important; }
+.project-visual-architecture { background-position: 0 0, 0 0, 32% 24%, 0 0 !important; }
+.project-visual-proof {
+  width: min(280px, calc(100% - 48px));
+  padding: 16px;
+  position: absolute;
+  left: 24px;
+  bottom: 22px;
+  z-index: 4;
+  border: 1px solid rgba(255,255,255,.13);
+  border-radius: 18px;
+  background: rgba(7,7,7,.78);
+  box-shadow: 0 22px 60px rgba(0,0,0,.44), inset 0 1px 0 rgba(255,255,255,.065);
+  backdrop-filter: blur(18px);
+}
+.project-visual-proof span,
+.project-visual-proof small {
+  display: block;
+  color: var(--muted-dark);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.project-visual-proof b {
+  display: block;
+  margin: 8px 0 5px;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1.05;
+}
+.portfolio-project-card .case-link-label {
+  margin-top: 18px;
+}
+.mini-cover {
+  width: 100%;
+  min-height: 146px;
+  margin: 24px 0 20px;
+  place-items: start;
+  align-content: space-between;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.026) 1px, transparent 1px),
+    radial-gradient(circle at 74% 26%, rgba(255,255,255,.105), transparent 30%),
+    linear-gradient(145deg, #111, #060606 70%);
+  background-size: 32px 32px, 32px 32px, auto, auto;
+}
+.mini-cover::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -52px;
+  top: -46px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 50%;
+}
+.mini-cover i {
+  width: 78px;
+  height: 78px;
+  position: absolute;
+  left: 18px;
+  bottom: -32px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 50%;
+}
+.mini-cover strong {
+  position: relative;
+  z-index: 2;
+  font-size: 42px;
+  line-height: 1;
+}
+.mini-cover small {
+  position: relative;
+  z-index: 2;
+  color: var(--muted-dark);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.mini-cover-architecture {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.026) 1px, transparent 1px),
+    radial-gradient(circle at 30% 22%, rgba(255,255,255,.11), transparent 31%),
+    linear-gradient(145deg, #121212, #060606 72%);
+  background-size: 28px 28px, 28px 28px, auto, auto;
+}
+@media (max-width: 520px) {
+  .project-visual-proof {
+    width: calc(100% - 34px);
+    left: 17px;
+    bottom: 17px;
+    padding: 14px;
+  }
+  .project-visual-proof b { font-size: 21px; }
+  .mini-cover { min-height: 130px; }
+}
