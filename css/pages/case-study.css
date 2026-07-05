@@ -1,0 +1,69 @@
+/* Premium case study pages. */
+.case-study-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 14% 8%, rgba(255,255,255,.055), transparent 28%),
+    radial-gradient(circle at 86% 6%, rgba(255,255,255,.035), transparent 28%),
+    var(--ink);
+}
+.case-hero { min-height: 82vh; padding-top: clamp(132px, 14vw, 190px); padding-bottom: clamp(64px, 8vw, 104px); display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(320px, .78fr); gap: clamp(38px, 6vw, 88px); align-items: center; position: relative; }
+.breadcrumb { display: inline-flex; margin-bottom: 30px; color: var(--muted-dark); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.breadcrumb:hover { color: var(--white); }
+.case-hero h1 { max-width: 900px; margin: 0; font-family: var(--serif); font-size: clamp(66px, 9vw, 138px); font-weight: 400; line-height: .9; letter-spacing: -.078em; }
+.case-summary { max-width: 690px; margin: 30px 0 0; color: var(--muted); font-size: clamp(17px, 1.45vw, 20px); line-height: 1.75; }
+.case-visual { min-height: 510px; padding: 28px; display: grid; align-content: space-between; overflow: hidden; border-radius: var(--radius-lg); position: relative; }
+.case-visual::before, .case-visual::after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; }
+.case-visual::before { width: 360px; height: 360px; right: -82px; top: -72px; }
+.case-visual::after { width: 220px; height: 220px; left: 8%; bottom: -82px; }
+.case-visual strong { position: relative; z-index: 1; align-self: center; justify-self: center; color: rgba(244,245,240,.08); font-family: var(--serif); font-size: clamp(92px, 12vw, 170px); font-style: italic; font-weight: 400; letter-spacing: -.16em; line-height: .8; }
+.case-visual-note { width: min(100%, 320px); position: relative; z-index: 2; padding: 18px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: rgba(8,8,8,.72); box-shadow: 0 24px 70px rgba(0,0,0,.34); }
+.case-visual-note span, .case-visual-note small { display: block; color: var(--muted-dark); font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.case-visual-note b { display: block; margin: 8px 0; color: var(--white); font-family: var(--serif); font-size: 30px; font-weight: 400; letter-spacing: -.04em; line-height: 1.05; }
+.case-section { padding-block: clamp(68px, 9vw, 126px); }
+.snapshot-grid, .case-proof-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.snapshot-card, .case-copy-panel, .case-proof-card { padding: 26px; border-radius: var(--radius); position: relative; overflow: hidden; }
+.snapshot-card span, .case-copy-panel span, .case-proof-card span { display: block; color: var(--muted-dark); font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.snapshot-card strong { display: block; margin-top: 36px; color: var(--white); font-family: var(--serif); font-size: clamp(28px, 3vw, 42px); font-weight: 400; letter-spacing: -.045em; line-height: 1.08; }
+.case-two-col { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: 16px; }
+.case-copy-panel h2, .case-cta h2 { margin: 22px 0 0; font-family: var(--serif); font-size: clamp(42px, 5.6vw, 78px); font-weight: 400; line-height: .98; letter-spacing: -.055em; }
+.case-copy-panel p, .case-copy-panel li, .case-proof-card p, .case-cta p { color: var(--muted); font-size: 15px; line-height: 1.75; }
+.case-copy-panel ul { margin: 28px 0 0; padding: 0; list-style: none; }
+.case-copy-panel li { padding: 12px 0; border-top: 1px solid var(--line-soft); }
+.case-proof-card { min-height: 280px; }
+.case-proof-card h3 { margin: 46px 0 14px; font-family: var(--serif); font-size: clamp(30px, 3vw, 44px); font-weight: 400; line-height: 1.05; letter-spacing: -.045em; }
+.case-cta { padding: clamp(44px, 7vw, 90px); border-radius: var(--radius-lg); }
+.case-cta h2 { max-width: 900px; }
+.case-cta p { max-width: 620px; margin: 28px 0 34px; }
+@media (max-width: 1100px) { .case-hero, .case-two-col { grid-template-columns: 1fr; } .case-visual { max-width: 680px; min-height: 420px; } .snapshot-grid, .case-proof-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .case-hero { padding-top: 112px; min-height: auto; } .case-hero h1 { font-size: clamp(48px, 15vw, 68px); } .case-visual { min-height: 320px; padding: 20px; } .case-visual strong { font-size: 82px; } .snapshot-grid, .case-proof-grid { grid-template-columns: 1fr; } .snapshot-card strong { margin-top: 24px; } .case-copy-panel, .case-proof-card { padding: 22px; } }
+
+
+/* PR #14 safe case-study visuals. */
+.case-visual {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.026) 1px, transparent 1px),
+    radial-gradient(circle at 70% 22%, rgba(255,255,255,.09), transparent 32%),
+    linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.018));
+  background-size: 38px 38px, 38px 38px, auto, auto;
+}
+.case-visual-auto {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.036) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.028) 1px, transparent 1px),
+    radial-gradient(circle at 76% 22%, rgba(255,255,255,.1), transparent 31%),
+    linear-gradient(145deg, rgba(255,255,255,.064), rgba(255,255,255,.018));
+  background-size: 34px 34px, 34px 34px, auto, auto;
+}
+.case-proof-highlight {
+  grid-column: span 2;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255,255,255,.09), transparent 34%),
+    linear-gradient(145deg, rgba(255,255,255,.072), rgba(255,255,255,.02));
+}
+.case-proof-highlight h3 {
+  max-width: 520px;
+}
+@media (max-width: 1100px) {
+  .case-proof-highlight { grid-column: auto; }
+}
