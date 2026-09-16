@@ -5,39 +5,41 @@
 
 // ── Contact Form (Formspree) ──────────────────────
 (function initContactForm() {
-  const form = document.getElementById('cForm');
+  const form = document.getElementById('contactForm');
   if (!form) return;
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const btn = document.getElementById('cBtn');
-    const msg = document.getElementById('cMsg');
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('formMsg');
+    
+    if (!btn || !msg) return;
 
-    btn.disabled     = true;
-    btn.textContent  = 'Sending...';
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
     msg.style.display = 'none';
 
     try {
-      const res = await fetch('https://formspree.io/f/nexuswave', {
-        method:  'POST',
-        body:    new FormData(form),
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
         headers: { Accept: 'application/json' },
       });
 
       if (res.ok) {
-        msg.textContent  = 'Message sent. We will be in touch within 24 hours.';
-        msg.className    = 'cmsg ok';
+        msg.textContent = 'Message sent. We will be in touch within 24 hours.';
+        msg.className = 'cmsg ok';
         form.reset();
-        btn.textContent  = 'Sent';
+        btn.textContent = 'Sent';
       } else {
         throw new Error('Failed');
       }
     } catch {
-      msg.textContent  = 'Something went wrong. WhatsApp us at +92 327 8263522';
-      msg.className    = 'cmsg err';
-      btn.disabled     = false;
-      btn.textContent  = 'Send Message →';
+      msg.textContent = 'Something went wrong. WhatsApp us at +92 327 8263522';
+      msg.className = 'cmsg err';
+      btn.disabled = false;
+      btn.textContent = 'Submit inquiry ↗';
     }
 
     msg.style.display = 'block';

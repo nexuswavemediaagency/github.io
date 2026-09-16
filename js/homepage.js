@@ -2,21 +2,6 @@
 (function () {
   'use strict';
 
-  var responsivePolish = document.createElement('link');
-  responsivePolish.rel = 'stylesheet';
-  responsivePolish.href = 'css/pages/index-responsive-fixes.css';
-  document.head.appendChild(responsivePolish);
-
-  var headerStatsPolish = document.createElement('link');
-  headerStatsPolish.rel = 'stylesheet';
-  headerStatsPolish.href = 'css/pages/index-header-stats-fix.css';
-  document.head.appendChild(headerStatsPolish);
-
-  var brandMobilePolish = document.createElement('link');
-  brandMobilePolish.rel = 'stylesheet';
-  brandMobilePolish.href = 'css/pages/index-brand-mobile-polish.css';
-  document.head.appendChild(brandMobilePolish);
-
   var finalBrandPolish = document.querySelector('link[href="css/pages/final-brand-polish.css"]');
   if (finalBrandPolish) {
     document.head.appendChild(finalBrandPolish);

@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page Not Found — Nexus Wave Media Agency</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+  <title>Page Not Found | Nexus Wave Media Agency</title>
   <meta name="robots" content="noindex"/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="css/navbar.css"/>
-  <link rel="stylesheet" href="css/footer.css"/>
-  <link rel="stylesheet" href="css/animations.css"/>
+  <meta name="theme-color" content="#050505"/>
+  <link rel="stylesheet" href="/css/pages/index.css"/>
+  <link rel="stylesheet" href="/css/pages/index-polish.css"/>
+  <link rel="stylesheet" href="/css/pages/interior.css"/>
+  <link rel="stylesheet" href="/css/pages/index-responsive-fixes.css"/>
+  <link rel="stylesheet" href="/css/pages/index-header-stats-fix.css"/>
+  <link rel="stylesheet" href="/css/pages/index-brand-mobile-polish.css"/>
+  <link rel="stylesheet" href="/css/pages/final-brand-polish.css"/>
   <style>
     .not-found {
       min-height: 100vh;
@@ -20,19 +25,15 @@
       position: relative;
       overflow: hidden;
     }
-
     .not-found::before {
       content: '';
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
       background-size: 80px 80px;
       pointer-events: none;
       mask-image: radial-gradient(ellipse 50% 50% at 20% 50%, black 10%, transparent 80%);
     }
-
     .nf-num {
       font-family: var(--display);
       font-size: clamp(120px, 20vw, 240px);
@@ -47,12 +48,7 @@
       user-select: none;
       pointer-events: none;
     }
-
-    .nf-content {
-      position: relative;
-      z-index: 2;
-    }
-
+    .nf-content { position: relative; z-index: 2; }
     .nf-label {
       font-size: 11px;
       letter-spacing: 3px;
@@ -64,14 +60,7 @@
       align-items: center;
       gap: 14px;
     }
-
-    .nf-label::before {
-      content: '';
-      width: 24px;
-      height: 1px;
-      background: var(--g5);
-    }
-
+    .nf-label::before { content: ''; width: 24px; height: 1px; background: var(--g5); }
     .nf-title {
       font-family: var(--display);
       font-size: clamp(40px, 6vw, 72px);
@@ -80,7 +69,6 @@
       line-height: 0.95;
       margin-bottom: 20px;
     }
-
     .nf-sub {
       font-size: 15px;
       color: var(--g5);
@@ -89,69 +77,46 @@
       font-weight: 300;
       margin-bottom: 40px;
     }
-
-    .nf-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 640px) {
-      .not-found { padding: 100px 20px; }
-    }
+    .nf-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 640px) { .not-found { padding: 100px 20px; } }
   </style>
 </head>
-<body>
+<body class="premium-page error-page">
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
-  <!-- ─── NAVBAR ─── -->
-  <nav id="navbar">
-    <a class="nav-logo" href="index.html">
-      <div class="nav-logo-mark">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="18" stroke="#3D3D3D" stroke-width="1"/>
-          <ellipse cx="20" cy="20" rx="10" ry="18" stroke="#3D3D3D" stroke-width="1"/>
-          <ellipse cx="20" cy="20" rx="18" ry="7" stroke="#3D3D3D" stroke-width="1"/>
-          <line x1="2" y1="20" x2="38" y2="20" stroke="#3D3D3D" stroke-width="0.5"/>
-          <line x1="20" y1="2" x2="20" y2="38" stroke="#3D3D3D" stroke-width="0.5"/>
-        </svg>
-      </div>
-      <div class="nav-wordmark">Nexus Wave<span>Media Agency</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a class="btn-primary nav-cta" href="contact.html">Start a Project →</a>
-    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"     onclick="closeMenu()">Home</a>
-    <a href="about.html"     onclick="closeMenu()">About</a>
-    <a href="portfolio.html" onclick="closeMenu()">Portfolio</a>
-    <a href="pricing.html"   onclick="closeMenu()">Pricing</a>
-    <a href="contact.html"   onclick="closeMenu()">Contact</a>
-    <a href="contact.html" class="btn-primary mob-cta" onclick="closeMenu()">Start a Project →</a>
-  </div>
+  <header class="site-header" id="siteHeader">
+    <nav class="glass-nav" aria-label="Primary navigation">
+      <a class="brand brand-logo-link" href="/" aria-label="Nexus Wave Media Agency home"><img class="brand-logo-image" src="/images/nexus-wave-horizontal.svg" alt="NEXUS WAVE"/></a>
+      <ul class="desktop-nav"><li><a href="/">Home</a></li><li><a href="/services">Services</a></li><li><a href="/portfolio">Portfolio</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul>
+      <a class="nav-cta" href="/contact">Let&rsquo;s Talk <span aria-hidden="true">&#x2197;</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true"><a href="/">Home</a><a href="/services">Services</a><a href="/portfolio">Portfolio</a><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a class="mobile-menu-cta" href="/contact">Let&rsquo;s Talk <span aria-hidden="true">&#x2197;</span></a></div>
+  </header>
 
-  <!-- ─── 404 CONTENT ─── -->
-  <div class="not-found">
-    <div class="nf-num" aria-hidden="true">404</div>
-    <div class="nf-content">
-      <div class="nf-label">Page Not Found</div>
-      <h1 class="nf-title">This page<br/>doesn't exist.</h1>
-      <p class="nf-sub">The URL you entered doesn't exist on this site. You might have mistyped it, or the page may have moved.</p>
-      <div class="nf-links">
-        <a class="btn-primary" href="index.html">Go to Homepage →</a>
-        <a class="btn-outline" href="contact.html">Contact Us</a>
+  <main id="main-content">
+    <div class="not-found">
+      <div class="nf-num" aria-hidden="true">404</div>
+      <div class="nf-content">
+        <div class="nf-label">Page Not Found</div>
+        <h1 class="nf-title reveal">This page<br/>doesn't exist.</h1>
+        <p class="nf-sub reveal">The URL you entered doesn't exist on this site. You might have mistyped it, or the page may have moved.</p>
+        <div class="nf-links reveal">
+          <a class="button button-primary" href="/">Go to Homepage <span aria-hidden="true">&#x2197;</span></a>
+          <a class="button button-secondary" href="/contact">Contact Us</a>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <script src="js/navbar.js"></script>
+  <footer class="site-footer section-shell">
+    <div class="footer-grid"><div class="footer-brand"><a class="brand brand-logo-link" href="/" aria-label="Nexus Wave Media Agency home"><img class="brand-logo-image" src="/images/nexus-wave-horizontal.svg" alt="NEXUS WAVE"/></a><p>Nexus Wave is a digital growth studio from Hyderabad, Sindh, shaping how businesses are seen, understood, and chosen.</p></div><div class="footer-column"><h3>Explore</h3><a href="/services">Services</a><a href="/portfolio">Portfolio</a><a href="/#process">Process</a><a href="/about">About</a></div><div class="footer-column"><h3>Pages</h3><a href="/portfolio">Portfolio</a><a href="/pricing">Pricing</a><a href="/contact">Contact</a></div><div class="footer-column footer-contact"><h3>Start a conversation</h3><a href="mailto:letschat@nexuswavemediaagency.com">letschat@nexuswavemediaagency.com</a><a href="mailto:nexuswavemediaagency@gmail.com">nexuswavemediaagency@gmail.com</a><a href="https://wa.me/923278263522" target="_blank" rel="noopener">+92 327 8263522</a><span>Hyderabad, Sindh, Pakistan</span></div></div>
+    <div class="footer-bottom"><span>&copy; <span id="currentYear">2026</span> Nexus Wave Media Agency</span><span>Seen clearly &middot; Felt properly &middot; Chosen sooner</span></div>
+  </footer>
+  <script src="/js/homepage.js"></script>
 </body>
 </html>
